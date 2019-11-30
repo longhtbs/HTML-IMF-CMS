@@ -1,0 +1,9 @@
+.page-dashboard {
+    .site-content {
+        // margin-top: 1rem;
+
+        @include respond-above(lg) {
+            margin-left: 240px;
+        }
+    }
+}

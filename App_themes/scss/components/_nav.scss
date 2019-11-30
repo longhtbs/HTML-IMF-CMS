@@ -1,0 +1,138 @@
+/* site nav */
+.site-nav {
+    width: 280px;
+    position: fixed;
+    top: 3.5rem;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: #2E3842;
+    display: none;
+    z-index: 3;
+
+    &.is-active {
+        display: block;
+    }
+
+    h5 {
+        padding: 0.75rem 1rem;
+        margin-bottom: 0;
+        position: relative;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: white;
+            width: 4px;
+            height: 16px;
+            top: 50%;
+            left: 0;
+            margin-top: -8px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .children {
+        li {
+            font-size: 0.875rem;
+            padding: 0.75rem 1rem;
+            opacity: 0.5;
+
+            &.is-active,
+            &:hover {
+                background-color: #20272E;
+                opacity: 1;
+            }
+
+            &.is-active {
+                background-color: $primary;
+            }
+
+            a {
+                color: white;
+                display: block;
+            }
+        }
+
+        [class^="fa"] {
+            margin-right: 0.25rem;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
+
+    @include respond-above(md) {
+        display: block;
+        width: 240px;
+    }
+}
+
+// right nav
+.site-aside {
+    position: fixed;
+    top: 3.5rem;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: none;
+
+    .column-nav {
+        width: 48px;
+        background-color: #fafafa;
+        border-left: 1px solid #ddd;
+
+    }
+
+    .nav-item {
+        display: block;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        vertical-align: middle;
+
+        &:hover,
+        &.is-active {
+            background-color: #f0f0f0;
+        }
+    }
+
+    .column-content {
+        max-width: 300px;
+        border-left: 1px solid #eee;
+
+        .nav-content {
+            display: none;
+            width: 300px;
+
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+
+    @include respond-above(md) {
+        display: flex;
+    }
+}

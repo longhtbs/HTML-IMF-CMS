@@ -1,0 +1,47 @@
+.breadcrumb {
+    padding: 0;
+    background-color: white;
+    border-radius: 0;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    align-items: center;
+
+    .btn {
+        font-size: 0.875rem;
+    }
+}
+
+.breadcrumb-item {
+
+    +.breadcrumb-item {
+
+        &::before {}
+    }
+
+    +.breadcrumb-item:hover::before {}
+
+    &.active {
+        color: black;
+        border-bottom: 4px solid $blue;
+        padding-bottom: 0.25rem;
+    }
+
+    &+.active {
+        border-bottom: none;
+    }
+
+    h1 {
+        font-size: 1.125rem;
+        margin: 0;
+    }
+
+    a {
+        color: #555;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}

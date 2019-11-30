@@ -1,0 +1,29 @@
+.site-content {
+    margin-top: 4.5rem;
+}
+
+.page-full {
+    .site-content {
+        @include respond-above(md) {
+            margin-left: 240px;
+            margin-right: 50px;
+        }
+
+        @include respond-above(lg) {
+            &.is-expand {
+                margin-right: 350px;
+            }
+        }
+    }
+}
+
+#site-mask {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}

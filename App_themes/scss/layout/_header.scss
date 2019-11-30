@@ -1,0 +1,183 @@
+// Header style
+.site-header {
+    background-color: white;
+    margin: 0;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    .logo {
+        margin: 0;
+        background-color: $primary;
+        height: 100%;
+        width: calc(100% - 240px);
+        padding: 0.5rem;
+        width: 120px;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 120px);
+        padding: 0.5rem;
+    }
+
+    #btn-expand {
+        padding: 0 0.5rem;
+        font-size: 1.5rem;
+
+        a {
+            display: block;
+        }
+
+        .fa-times {
+            display: none;
+        }
+    }
+
+    .search-wrap {
+        display: none;
+    }
+
+    .search-suggestion {
+        display: none;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        &:empty {
+            background-color: transparent;
+        }
+
+        .heading {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .suggestion-wrap {
+            &+.suggestion-wrap {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                padding-top: 16px;
+                margin-top: 16px;
+            }
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            padding: 4px 8px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+
+            &.text {
+                margin-top: 8px;
+            }
+
+            a {
+                display: block;
+            }
+
+            .highlight {
+                color: $blue;
+                font-weight: bold;
+                font-style: normal;
+            }
+        }
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    .user-wrap {
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    @include respond-above(sm) {}
+
+    @include respond-above(md) {
+        max-height: 3.5rem;
+
+        .logo {
+            width: 240px;
+            padding: 0.5rem 0;
+
+            .img-fluid {
+                height: 100%;
+                width: auto;
+                padding-left: 1.5rem;
+            }
+        }
+
+        .content {
+            width: calc(100% - 240px);
+            padding: 0.5rem 1rem;
+        }
+
+        #btn-expand {
+            display: none;
+        }
+
+        .search-wrap {
+            width: 400px;
+            position: relative;
+            display: block;
+
+            .fa-search {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .fa-caret-down {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .input-wrap {
+                .form-control {
+                    padding-left: 2.5rem;
+                }
+            }
+        }
+    }
+
+    @include respond-above(lg) {}
+}
