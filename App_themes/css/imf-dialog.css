@@ -37,6 +37,10 @@
     padding: .25rem .75rem;
 }
 
+.modal-content .form-group label {
+    margin-bottom: 0;
+}
+
 /* The Close Button */
 .close {
     color: #FFF;
