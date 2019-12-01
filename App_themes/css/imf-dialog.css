@@ -29,8 +29,8 @@
     display: table;
     z-index: 999;
     overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid #6EA873;
+    border-radius: 0px;
+    border: none;
 }
 
 .modal-content .input-group-text {

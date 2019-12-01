@@ -1,17 +1,19 @@
 // init function
 var isMobile, isTablet, isDesktop;
+var widthWindows = $(window).width(),
+    heightWindows = $(window).height();
+var rtime = new Date();
+var delta = 200;
+var timeout = false;
 
 $(function() {
     /*check device width*/
-    vWidth = window.innerWidth;
-    if (vWidth < 768) {
-        console.log("mobile");
+    if (widthWindows < 768) {
         isMobile = true;
-    } else if (vWidth < 1024) {
-        console.log("tablet");
+        if (widthWindows < 600) ChangeWidthForms();
+    } else if (widthWindows < 1024) {
         isTablet = true;
     } else {
-        console.log("desktop");
         isDesktop = true;
     }
 
@@ -19,8 +21,9 @@ $(function() {
     window.onscroll = function() { windowScroll() };
 
     // click to toggle left nav
-    $('.site-header .btn-expand ').on('click', btnExpandClick);
+    $('.site-header .btn-expand').on('click', btnExpandClick);
     $('#site-mask').on('click', siteMaskClick);
+    $('.site-header .btn-expand .fa-times').on('click', siteMaskClick);
 
     // click to toggle search dropdown
     $('.site-header .input-wrap .fa-caret-down').on('click', dropClick);
@@ -28,7 +31,42 @@ $(function() {
     // click to toggle tab on right nav
     $('.site-aside .nav-item').on('click', rightNavClick);
 
+    // click to change tab on upload wrap
+    $('.upload-wrap .nav-item').on('click', uploadTabClick);
+
+    $(window).resize(function() {
+        rtime = new Date();
+        if (timeout === false) {
+            timeout = true;
+            setTimeout(ResizeWindows, delta);
+        }
+        //ResizeWindows();
+    });
+
 });
+
+
+function ChangeWidthForms() {
+    if (widthWindows < 550) {
+        $(".formDetail").width(widthWindows - 80);
+    } else {
+        $(".formDetail").width(500);
+    }
+}
+
+/**
+ * Event when change windows size
+ * */
+function ResizeWindows() {
+    if (new Date() - rtime < delta) {
+        setTimeout(ResizeWindows, delta);
+    } else {
+        timeout = false;
+        widthWindows = $(window).width();
+        heightWindows = $(window).height();
+        ChangeWidthForms();
+    }
+}
 
 /*customise function*/
 // scoll down & pin site header
@@ -45,6 +83,7 @@ function expandNav() {
     $('.btn-expand .fa-bars').toggle();
     $('.btn-expand .fa-times').toggle();
     $('#site-mask').toggle();
+    $('body').css('overflow', 'hidden');
 }
 
 function siteMaskClick(e) {
@@ -54,6 +93,7 @@ function siteMaskClick(e) {
     $('.btn-expand .fa-bars').show();
     $('.btn-expand .fa-times').hide();
     $('#site-mask').hide();
+    $('body').removeAttr('style');
 }
 
 function dropClick(e) {
@@ -74,6 +114,9 @@ function expandDropdown(targetDropdown) {
                 container.removeClass('is-active');
             }
         });
+        $('#' + t + ' #btnApply').on('click', function() {
+            $('#' + targetDropdown).removeClass('is-active');
+        })
     }
 }
 
@@ -101,4 +144,19 @@ function rightNavClick(e) {
         $(this).toggleClass('is-active');
         showRightTab(t);
     }
+}
+
+// tab for upload image
+function showTab(targetToggle) {
+    $('.upload-content .tab-content').removeClass('is-active');
+    $('#' + targetToggle).addClass('is-active');
+}
+
+function uploadTabClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    t = $(this).data('target');
+    $(this).siblings().removeClass('is-active');
+    $(this).addClass('is-active');
+    showTab(t);
 }

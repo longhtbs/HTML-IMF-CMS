@@ -1,0 +1,123 @@
+.upload {
+    &-wrap {}
+
+    &-nav {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-item {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+
+        &.is-active {
+            background-color: $primary;
+            color: white;
+        }
+    }
+
+    .tab-content {
+        display: none;
+        margin-top: 1rem;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    .tab-footer {
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .browseImg {
+        border: 2px dashed #ddd;
+        height: 5rem;
+        text-align: center;
+    }
+
+    // image list 
+    .album-list,
+    .image-list {
+        height: 10rem;
+        overflow-y: auto;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 0.5rem 1.125rem;
+
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+
+        .image-item {
+            text-align: center;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border: 1px solid transparent;
+            position: relative;
+            height: 6rem;
+
+            &:hover {
+                border-color: #ddd;
+            }
+
+            &.is-selected {
+                border-color: $primary;
+            }
+
+            img {
+                max-height: calc(100% - 16px);
+                width: auto;
+                max-width: calc(100% - 32px);
+                transform: translate(-50%, -50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+        }
+
+        @include respond-above(md) {
+            height: 15rem;
+
+            .image-item {
+                height: 7.5rem;
+            }
+        }
+
+        .album-item {
+            border: 1px solid #ddd;
+            margin-bottom: 0.5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .title {
+                font-size: 0.875rem;
+                font-weight: bold;
+                margin-bottom: 0;
+                padding: 0.5rem;
+            }
+
+            .desc {
+                opacity: 0.8;
+                font-size: 0.625rem;
+                padding: 0 0.5rem 0.5rem;
+            }
+        }
+    }
+}

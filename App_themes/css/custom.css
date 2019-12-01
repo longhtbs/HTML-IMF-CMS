@@ -1,3 +1,7 @@
 ﻿.formDetail {
     max-width: 500px;
 }
+
+.formDetail.modal-lg {
+    max-width: 800px;
+}

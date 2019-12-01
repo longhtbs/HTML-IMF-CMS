@@ -58,7 +58,7 @@ class HDialog {
             left = (this.WidthContainer - $(modal).width()) / 2;
             top = (this.HeightContainer - $(modal).height()) / 2;
         } else {
-            left = ($(window).width() - $(modal).width()-20) / 2;
+            left = (($(window).width() - $(modal).width()-20) / 2)-10;
             top = ($(window).height() - $(modal).height()) / 2;
             if (top < 70) top = 70;
         }

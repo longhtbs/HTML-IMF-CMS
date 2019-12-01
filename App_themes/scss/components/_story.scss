@@ -36,6 +36,7 @@
         margin-bottom: 0;
         font-weight: bold;
         font-size: 0.875rem;
+        line-height: 1.4em;
 
         @include respond-above(md) {}
 
@@ -92,10 +93,16 @@
                 max-width: 64px;
             }
 
+            .story__header {
+                width: calc(100% - 136px);
+                float: left;
+            }
+
             .story__aside {
                 display: block;
                 float: right;
                 text-align: right;
+                width: 64px;
             }
         }
     }
