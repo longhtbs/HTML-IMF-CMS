@@ -12,10 +12,13 @@
     <link href="App_themes/fonts/fontawesome-pro-5.11.2-web/css/all.min.css" rel="stylesheet">
     <!-- Customise css -->
     <link rel="stylesheet" href="App_themes/css/main.css">
-    <title>IMF CMS - Dashboard</title>
+    <link href="App_themes/css/jquery-ui.css" rel="stylesheet" />
+    <link href="App_themes/css/imf-dialog.css" rel="stylesheet" />
+    <link href="App_themes/css/custom.css" rel="stylesheet" />
+    <title>IMF CMS - Table Listing</title>
 </head>
 
-<body class="page-dashboard page-full">
+<body class="page-investor page-full">
     <header class="site-header" id="site-header">
         <h1 class="logo"><a href="#"><img src="App_themes/images/logo.png" alt="" class="img-fluid"></a></h1>
         <div class="content">
@@ -63,79 +66,68 @@
     </header>
     <main class="site-content">
         <div class="container">
-            <!-- filter -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-12 col-md-3 mb-3 mb-md-0">
-                            <select name="" class="form-control">
-                                <option value="" selected>Xem theo tháng</option>
-                                <option value="">Xem theo quý</option>
-                            </select>
-                        </div>
-                        <div class="col-6 col-md-2 mb-3 mb-md-0"><input type="text" class="form-control" placeholder="2011-01-12"></div>
-                        <div class="col-6 col-md-2 mb-3 mb-md-0"><input type="text" class="form-control" placeholder="2011-01-12"></div>
-                        <div class="col-7 col-md-3 mb-3 mb-md-0">
-                            <select name="" class="form-control">
-                                <option value="">Tin tức</option>
-                                <option value="">Xã hội</option>
-                            </select>
-                        </div>
-                        <div class="col-5 col-md-2 mb-3 mb-md-0 text-right"><a class="btn btn-primary">Xem</a></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-7 col-md-9  mb-3 mb-md-0"><input type="text" class="form-control" placeholder="..."></div>
-                        <div class="col-5 col-md-3 text-right"><a class="btn btn-primary">So sánh</a></div>
-                    </div>
-                </div>
-            </div>
-            <section class="box mt-3">
-                <div class="box__content">
-                    <img src="images/chart.png" alt="" class="img-fluid">
-                </div>
-            </section>
             <section class="box mt-5">
                 <div class="box__header">
-                    <h2 class="box__title text-center text-uppercase"><i class="fal fa-eye mr-2"></i>Top view</h2>
+                    <h2 class="box__title text-uppercase">
+                        <i class="fal fa-warehouse mr-2"></i>DS users
+                        <a href="#" class="btn btn-sm btn-light float-right" id="aAdd"><i class="fal fa-plus mr-1"></i>Thêm mới</a></h2>
                 </div>
                 <div class="box__content">
-                    <ul class="nav nav-pills" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="topview-24h" data-toggle="tab" href="#person24h" role="tab" aria-controls="person24h" aria-selected="true">Top view của tôi 24h qua</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="topview-all-24h" data-toggle="tab" href="#all24h" role="tab" aria-controls="all24h" aria-selected="false">Top view toàn trang 24h qua</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="topview-all-week" data-toggle="tab" href="#allweek" role="tab" aria-controls="allweek" aria-selected="false">Top view toàn trang 7 ngày</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="topview-all-month" data-toggle="tab" href="#allmonth" role="tab" aria-controls="allmonth" aria-selected="false">Top view toàn trang 1 tháng</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-4" id="myTabContent">
-                        <div class="tab-pane fade show active" id="person24h" role="tabpanel" aria-labelledby="topview-24h">
-                            <article class="story story--left">
-                                <figure class="story__thumb"><a href="#"><img src="https://source.unsplash.com/random/80x60" alt="" class="img-fluid"></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga pariatur, animi. Placeat, adipisci, iusto!</a><span class="text-muted font-weight-normal"><i class="fal fa-eye ml-3 mr-1"></i>1</span></h3>
-                                    <div class="story__meta"> tieudungthoinay.vn (2 - 100% ) </div>
-                                </div>
-                            </article>
-                            <article class="story story--left">
-                                <figure class="story__thumb"><a href="#"><img src="https://source.unsplash.com/random/80x60" alt="" class="img-fluid"></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga pariatur, animi. Placeat, adipisci, iusto!</a><span class="text-muted font-weight-normal"><i class="fal fa-eye ml-3 mr-1"></i>1</span></h3>
-                                    <div class="story__meta"> tieudungthoinay.vn (2 - 100% ) </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="tab-pane fade" id="all24h" role="tabpanel" aria-labelledby="topview-all-24h">...</div>
-                        <div class="tab-pane fade" id="allweek" role="tabpanel" aria-labelledby="topview-all-week">...</div>
-                        <div class="tab-pane fade" id="allmonth" role="tabpanel" aria-labelledby="topview-all-month">...</div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Họ tên</th>
+                                    <th scope="col">Bút danh</th>
+                                    <th scope="col">Chức danh</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Kiểu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><a href="#" class="text-link">Mark</a></td>
+                                    <td>Otto</td>
+                                    <td>Demo</td>
+                                    <td>@mdo</td>
+                                    <td>098</td>
+                                    <td>Trong tòa soạn</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td><a href="#" class="text-link">Jacob</a></td>
+                                    <td>Thornton</td>
+                                    <td>Demo</td>
+                                    <td>@fat</td>
+                                    <td>098</td>
+                                    <td>Trong tòa soạn</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td><a href="#" class="text-link">Larry</a></td>
+                                    <td>the Bird</td>
+                                    <td>Demo</td>
+                                    <td>@twitter</td>
+                                    <td>098</td>
+                                    <td>Trong tòa soạn</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+                <div class="box__footer">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </section>
         </div>
@@ -279,7 +271,19 @@
     <script src="App_themes/js/vendor/jquery.min.js"></script>
     <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="App_themes/js/vendor/jquery-ui.min.js"></script>
     <script src="App_themes/js/app.js"></script>
+    <script src="App_themes/js/imf-dialog.js"></script>
+    <script>
+    var dialogDetail = new HDialog("uploadImageWrap", "Chèn ảnh");
+    $("#uploadImage").click(function() {
+        dialogDetail.Show();
+    });
+    var dialogProgress = new HDialog("progressUpload", "Đang tải lên... ");
+    $("#btnInsert").click(function() {
+        dialogProgress.Show();
+    });
+    </script>
 </body>
 
 </html>

@@ -20,10 +20,13 @@ $(function() {
     /*pin header */
     window.onscroll = function() { windowScroll() };
 
+    // click to expand search on site header mobile
+    $('.site-header #btn-search').on('click', btnSearchClick);
+
     // click to toggle left nav
-    $('.site-header .btn-expand').on('click', btnExpandClick);
+    $('.site-header #btn-expand').on('click', btnExpandClick);
     $('#site-mask').on('click', siteMaskClick);
-    $('.site-header .btn-expand .fa-times').on('click', siteMaskClick);
+    $('.site-header #btn-expand .fa-times').on('click', siteMaskClick);
 
     // click to toggle search dropdown
     $('.site-header .input-wrap .fa-caret-down').on('click', dropClick);
@@ -80,18 +83,30 @@ function btnExpandClick(e) {
 
 function expandNav() {
     $('.site-nav').toggleClass('is-active');
-    $('.btn-expand .fa-bars').toggle();
-    $('.btn-expand .fa-times').toggle();
+    $('#btn-expand .fa-bars').toggle();
+    $('#btn-expand .fa-times').toggle();
     $('#site-mask').toggle();
     $('body').css('overflow', 'hidden');
+}
+
+function btnSearchClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    expandSearch();
+}
+
+function expandSearch() {
+    $('.search-wrap').toggleClass('is-active');
+    $('#btn-search .fa-search').toggle();
+    $('#btn-search .fa-times').toggle();
 }
 
 function siteMaskClick(e) {
     e.preventDefault();
     e.stopPropagation();
     $('.site-nav').removeClass('is-active');
-    $('.btn-expand .fa-bars').show();
-    $('.btn-expand .fa-times').hide();
+    $('#btn-expand .fa-bars').show();
+    $('#btn-expand .fa-times').hide();
     $('#site-mask').hide();
     $('body').removeAttr('style');
 }
