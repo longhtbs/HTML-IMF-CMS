@@ -10,6 +10,22 @@
         background-color: $primary;
         padding: 1rem;
         @include clearfix;
+
+        &.secondary {
+            background-color: $secondary;
+        }
+
+        &.red {
+            background-color: $red;
+        }
+
+        &.yellow {
+            background-color: $yellow;
+        }
+
+        &.cyan {
+            background-color: $cyan;
+        }
     }
 
     &__title {
