@@ -73,7 +73,18 @@ function ResizeWindows() {
 
 /*customise function*/
 // scoll down & pin site header
-function windowScroll() {}
+var mainNavHeight = $('#mainNav').outerHeight();
+var mainNavoffsetTop = $('#mainNav').offset().top;
+var mainNavoffsetLeft = $('#mainNav').offset().left;
+var bsContainer = $('.container').width();
+
+function windowScroll() {
+    if (document.body.scrollTop > (mainNavHeight + mainNavoffsetTop) || document.documentElement.scrollTop > (mainNavHeight + mainNavoffsetTop)) {
+        $('#mainNav').addClass('is-pinned').css({ 'top': mainNavoffsetTop + 'px', 'left': mainNavoffsetLeft + 'px', 'width': bsContainer + 'px' });
+    } else {
+        $("#mainNav").removeClass('is-pinned');
+    }
+}
 
 function btnExpandClick(e) {
     e.preventDefault();

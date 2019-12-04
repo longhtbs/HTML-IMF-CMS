@@ -66,7 +66,7 @@
     </header>
     <main class="site-content">
         <div class="container">
-            <ul class="nav bg-white">
+            <ul class="nav bg-white" id="mainNav">
                 <li class="nav-item">
                     <a href="#base" class="nav-link">Cơ bản</a>
                 </li>
@@ -83,7 +83,7 @@
                     <a href="#utilities" class="nav-link">Tiện ích</a>
                 </li>
             </ul>
-            <section class="box mt-5" id="base">
+            <section class="box mt-3" id="base">
                 <div class="box__header">
                     <h5 class="box__title">Cơ bản dự án</h5>
                 </div>
@@ -92,34 +92,26 @@
                         <label for="txtName">Tên </label>
                         <input type="text" class="form-control form-control-lg" id="txtName" placeholder="Ten du an">
                     </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="sltType">Kieu du an</label>
-                                <select name="" id="sltType" class="form-control border-full">
-                                    <option value="">Kiểu nhà</option>
-                                    <option value="Biệt thự">Biệt thự</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="sltKind">Phan loai</label>
-                                <select name="" id="sltKind" class="form-control border-full">
-                                    <option value="">Du an mua</option>
-                                    <option value="Cho thue">Cho thue</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="sltKind">Chủ đầu tư</label>
-                                <select name="" id="sltKind" class="form-control border-full">
-                                    <option value="">VinGroup</option>
-                                    <option value="Cho thue">Sungroup</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="form-group form-inline">
+                        <label for="sltType">Kieu du an</label>
+                        <select name="" id="sltType" class="form-control border-full">
+                            <option value="">Kiểu nhà</option>
+                            <option value="Biệt thự">Biệt thự</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="sltKind">Phan loai</label>
+                        <select name="" id="sltKind" class="form-control border-full">
+                            <option value="">Du an mua</option>
+                            <option value="Cho thue">Cho thue</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="sltKind">Chủ đầu tư</label>
+                        <select name="" id="sltKind" class="form-control border-full">
+                            <option value="">VinGroup</option>
+                            <option value="Cho thue">Sungroup</option>
+                        </select>
                     </div>
                     <hr>
                     <div contenteditable="true" class="editor" style="height:250px; width: 100%; padding:1rem">Editor</div>
@@ -141,57 +133,61 @@
                 </div>
                 <div class="box__content">
                     <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group row">
-                                <label class="col-2" for="txtAreaNumber">Tổng diện tích</label>
-                                <input type="text" id="txtAreaNumber" class="form-control col-4">
-                                <div class="col-3">
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" id="rdoAreaHA" name="rdoArea" class="custom-control-input">
-                                        <label class="custom-control-label" for="rdoAreaHA">hecta</label>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" id="rdoAreaM2" name="rdoArea" class="custom-control-input">
-                                        <label class="custom-control-label" for="rdoAreaM2">m²</label>
-                                    </div>
-                                </div>
+                        <div class="col-md-8 mb-3">
+                            <div class="form-group form-inline">
+                                <label class="" for="txtAreaNumber">Tổng diện tích</label>
+                                <input type="text" id="txtAreaNumber" class="form-control col-8">
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group row">
-                                <label class="col-2" for="txtdensityNumber">Mật độ xây dựng</label>
-                                <input type="text" id="txtdensityNumber" class="form-control col-4">
-                                <div class="col-3">
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" id="rdodensityPercent" name="rdoDensity" class="custom-control-input">
-                                        <label class="custom-control-label" for="rdodensityPercent">%</label>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" id="rdodensityM2" name="rdoDensity" class="custom-control-input">
-                                        <label class="custom-control-label" for="rdodensityM2">m²</label>
-                                    </div>
-                                </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="custom-control custom-radio custom-control-inline mt-2">
+                                <input type="radio" id="rdoAreaHA" name="rdoArea" class="custom-control-input">
+                                <label class="custom-control-label" for="rdoAreaHA">hecta</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline mt-2">
+                                <input type="radio" id="rdoAreaM2" name="rdoArea" class="custom-control-input">
+                                <label class="custom-control-label" for="rdoAreaM2">m²</label>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group row">
-                                <label class="col-3 mb-0" for="txtFloor">Số tầng</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <div class="form-group form-inline">
+                                <label class="" for="txtdensityNumber">Mật độ xây dựng</label>
+                                <input type="text" id="txtdensityNumber" class="form-control col-8">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="custom-control custom-radio custom-control-inline mt-2">
+                                <input type="radio" id="rdodensityPercent" name="rdoArea" class="custom-control-input">
+                                <label class="custom-control-label" for="rdodensityPercent">hecta</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline mt-2">
+                                <input type="radio" id="rdodensityM2" name="rdoArea" class="custom-control-input">
+                                <label class="custom-control-label" for="rdodensityM2">m²</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <div class="form-group form-inline">
+                                <label class="" for="txtFloor">Số tầng</label>
                                 <input type="text" id="txtFloor" class="form-control col-9">
                             </div>
                         </div>
-                        <div class="col-md-3 offset-md-1">
-                            <div class="form-group row">
-                                <label class="col-3 mb-0" for="txtBasement">Số hầm</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <div class="form-group form-inline">
+                                <label class="" for="txtBasement">Số hầm</label>
                                 <input type="text" id="txtBasement" class="form-control col-9">
                             </div>
                         </div>
-                        <div class="col-md-3 offset-md-1">
-                            <div class="form-group row">
-                                <label class="col-3 mb-0" for="txtApartment">Số căn</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <div class="form-group form-inline">
+                                <label class="" for="txtApartment">Số căn</label>
                                 <input type="text" id="txtApartment" class="form-control col-9">
                             </div>
                         </div>

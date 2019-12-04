@@ -136,3 +136,16 @@
         display: flex;
     }
 }
+
+// main nav
+#mainNav {
+    &.is-pinned {
+        position: fixed;
+        background: white;
+        z-index: 3;
+        border: 1px solid #ddd;
+        .nav-link{
+            padding: 0.25rem 0.5rem;
+        }
+    }
+}

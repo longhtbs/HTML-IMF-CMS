@@ -21,6 +21,7 @@
 
 a.btn {
     cursor: pointer;
+
     &:not([href]):not([tabindex]) {
         color: white;
     }
@@ -67,6 +68,19 @@ h2.title {
             font-size: 0.875rem;
             margin-bottom: 0;
             color: red;
+        }
+    }
+}
+
+.form-group {
+    &.form-inline {
+        label {
+            width: 20%;
+            justify-content: flex-start;
+        }
+
+        .form-control {
+            width: 80%;
         }
     }
 }

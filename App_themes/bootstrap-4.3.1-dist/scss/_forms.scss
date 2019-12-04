@@ -8,7 +8,7 @@
   display: block;
   width: 100%;
   height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  padding: $input-padding-y 0;
   font-family: $input-font-family;
   @include font-size($input-font-size-sm);
   font-weight: $input-font-weight;
@@ -137,7 +137,7 @@ select.form-control {
 
 .form-control-sm {
   height: $input-height-sm;
-  padding: $input-padding-y-sm $input-padding-x-sm;
+  padding: $input-padding-y-sm 0;
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
   // @include border-radius($input-border-radius-sm);
@@ -145,7 +145,7 @@ select.form-control {
 
 .form-control-lg {
   height: $input-height-lg;
-  padding: $input-padding-y-lg $input-padding-x-lg;
+  padding: $input-padding-y-lg 0;
   @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
   // @include border-radius($input-border-radius-lg);
