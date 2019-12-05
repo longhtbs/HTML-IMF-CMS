@@ -82,6 +82,10 @@ function windowScroll() {
     if (document.body.scrollTop > (mainNavHeight + mainNavoffsetTop) || document.documentElement.scrollTop > (mainNavHeight + mainNavoffsetTop)) {
         $('#mainNav').addClass('is-pinned').css({ 'top': mainNavoffsetTop + 'px', 'left': mainNavoffsetLeft + 'px', 'width': bsContainer + 'px' });
     } else {
+        mainNavHeight = $('#mainNav').outerHeight();
+        mainNavoffsetTop = $('#mainNav').offset().top;
+        mainNavoffsetLeft = $('#mainNav').offset().left;
+        bsContainer = $('.container').width();
         $("#mainNav").removeClass('is-pinned');
     }
 }
