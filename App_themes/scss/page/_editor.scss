@@ -1,3 +1,33 @@
+.page-editor {
+    .container {
+        max-width: 650px;
+
+        @include respond-above(md) {
+            width: 650px;
+        }
+    }
+
+    .site-content {
+        &.is-expand {
+            @include respond-above(xxl) {
+                margin-right: 550px;
+            }
+        }
+    }
+
+    .site-aside {
+        @include respond-above(xxl) {
+            .column-content {
+                max-width: 500px;
+
+                .nav-content {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
 .editor {
     max-width: 650px;
     margin-left: auto;

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="App_themes/images/favico.png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="App_themes/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <!-- Fonts -->
+    <link href="App_themes/fonts/fontawesome-pro-5.11.2-web/css/all.min.css" rel="stylesheet">
+    <!-- Customise css -->
+    <link rel="stylesheet" href="App_themes/css/main.css">
+    <link href="App_themes/css/jquery-ui.css" rel="stylesheet" />
+    <link href="App_themes/css/imf-dialog.css" rel="stylesheet" />
+    <link href="App_themes/css/custom.css" rel="stylesheet" />
+    <title>IMF CMS - Editor</title>
+</head>
+
+<body class="page-full page-editor">
+    <header class="site-header" id="site-header">
+        <h1 class="logo"><a href="#"><img src="App_themes/images/logo.png" alt="" class="img-fluid"></a></h1>
+        <div class="content">
+            <div class="search-wrap">
+                <div class="input-wrap" data-target="search-suggestion">
+                    <input type="text" class="form-control" placeholder="Nội dung tìm kiếm">
+                    <a href="#" class="fal fa-caret-down" data-target="search-suggestion"></a>
+                    <a href="#" class="fal fa-search"></a>
+                </div>
+                <div id="search-suggestion" class="search-suggestion">
+                    <h3 class="heading">Tìm kiếm nâng cao</h3>
+                    <div class="suggestion-wrap">
+                        <div class="form-group">
+                            <label for="InputCategory">Lọc theo chuyên mục</label>
+                            <select name="" id="" class="form-control" id="InputCategory">
+                                <option value="" checked>Tất cả</option>
+                                <option value="" checked>Tin tức</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputExample">Expample</label>
+                            <input type="txt" class="form-control" id="InputExample" placeholder="Expample">
+                        </div>
+                        <a class="btn btn-primary">Áp dụng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-expand" id="btn-expand"><a href="#"><i class="fal fa-bars"></i><i class="fal fa-times"></i></a></div>
+            <div class="btn-expand" id="btn-search"><a href="#"><i class="fal fa-search"></i><i class="fal fa-times"></i></a></div>
+            <div class="user-wrap">
+                <div class="dropdown">
+                    <div class="user" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://source.unsplash.com/random/32x32" alt="" class="user__avatar img-fluid rounded-circle">
+                        <span class="user__name">SonDT</span>
+                        <i class="fas fa-caret-down text-primary"></i>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="site-content is-expand">
+        <div class="container">
+            <section class="box mt-3" id="base">
+                <div class="box__header">
+                    <h5 class="box__title">Tạo bài viết mới</h5>
+                </div>
+                <div class="box__content">
+                    <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
+                </div>
+                <div class="box__footer">
+                    <a href="#" class="btn btn-success btn-sm mb-2"><i class="fal fa-save"></i> Lưu</a>
+                    <a href="#" class="btn btn-info btn-sm mb-2"><i class="fal fa-clock"></i> Đẩy lên chờ biên tập</a>
+                    <a href="#" class="btn btn-warning btn-sm mb-2"><i class="fal fa-hourglass-start"></i> Đẩy lên chờ xuất bản</a>
+                    <a href="#" class="btn btn-primary btn-sm mb-2"><i class="fal fa-globe"></i> Xuất bản</a>
+                    <a href="#" class="btn btn-dark btn-sm mb-2"><i class="fal fa-times"></i> Đóng</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- left navbar -->
+    <div class="site-nav">
+        <ul class="parent">
+            <li>
+                <h5>Bài viết</h5>
+                <ul class="children">
+                    <li class="is-active">
+                        <a href="/?cat=news-edit" title="Viết bài mới"><i class="fal fa-edit"></i> Viết bài mới</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-mylist" title="Bài của tôi"><i class="fal fa-book"></i> Bài của tôi (2)</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-waitforeditlist" title="Bài chờ biên tập"><i class="fal fa-clock"></i> Bài chờ biên tập (1)</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-receiveforeditlist" title="Bài nhận biên tập"><i class="fal fa-arrow-to-bottom"></i> Bài nhận biên tập (0)</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-waitforpublishlist" title="Bài chờ xuất bản"><i class="fal fa-hourglass-start"></i> Bài chờ xuất bản (0)</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-receiveforpublishlist" title="Bài nhận xuất bản"><i class="fal fa-download"></i> Bài nhận xuất bản (0)</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-publishlist" title="Bài đã xuất bản"><i class="fal fa-globe"></i> Bài đã xuất bản</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-returnlist" title="Bài trả lại"><i class="fal fa-undo"></i> Bài trả lại (3)</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-unpublishlist" title="Bài gỡ xuống"><i class="fal fa-cloud-download"></i> Bài gỡ xuống</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-deletelist" title="Bài đã xóa"><i class="fal fa-trash-alt"></i> Bài đã xóa</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Khác</h5>
+                <ul class="children">
+                    <li>
+                        <a href="/?cat=tag-list" title="Quản lý tag"><i class="fal fa-tags"></i> Quản lý tag</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=event-list" title="Quản lý dòng sự kiện"><i class="fal fa-calendar-alt"></i> Quản lý dòng sự kiện</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=view-list" title="Thống kê truy cập"><i class="fal fa-eye"></i> Thống kê truy cập</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=money" title="Thống kê nhuận bút"><i class="fal fa-pen"></i> Thống kê nhuận bút</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=comment" title="Quản lý bình luận"><i class="fal fa-comments"></i> Quản lý bình luận</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Quản lý chuyên mục</h5>
+                <ul class="children">
+                    <li>
+                        <a href="/?cat=category" title="Danh sách chuyên mục"><i class="fal fa-object-group"></i> Danh sách chuyên mục</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=category-config" title="Cấu hình chuyên mục"><i class="fal fa-cog"></i> Cấu hình chuyên mục</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=news-hot" title="Quản lý bài nổi bật"><i class="fal fa-tasks"></i> Quản lý bài nổi bật</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Người dùng</h5>
+                <ul class="children">
+                    <li>
+                        <a href="/?cat=user-list" title="Danh sách người dùng"><i class="fal fa-users"></i> Danh sách người dùng</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=author-list" title="Quản lý tác giả"><i class="fal fa-user-alt"></i> Quản lý tác giả</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Video</h5>
+                <ul class="children">
+                    <li>
+                        <a href="/?cat=video-list" title="Danh sách video"><i class="fal fa-video"></i> Danh sách video</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=videotype-list" title="Loại video"><i class="fal fa-file-video"></i> Loại video</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h5>Quảng cáo</h5>
+                <ul class="children">
+                    <li>
+                        <a href="/?cat=adv-list" title="Danh sách quảng cáo"><i class="fab fa-adversal"></i> Danh sách quảng cáo</a>
+                    </li>
+                    <li>
+                        <a href="/?cat=adv-type" title="Vị trí quảng cáo"><i class="fal fa-cogs"></i> Vị trí quảng cáo</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- right navbar -->
+    <div class="site-aside">
+        <div class="column-nav">
+            <a class="nav-item is-active" href="#detailBasic" title="Demo 1" data-target="detailBasic"><i class="fal fa-info"></i></a>
+            <a class="nav-item" href="#" title="Demo 2" data-target="navSeo"><i class="fal fa-file-search"></i></a>
+            <a class="nav-item" href="#" title="Demo 2" data-target="navAdvance"><i class="fal fa-cog"></i></a>
+            <a class="nav-item" href="#" title="Demo 2" data-target="navRoyalty"><i class="fal fa-usd-circle"></i></a>
+        </div>
+        <div class="column-content">
+            <div class="nav-content is-active" id="detailBasic">
+                <h5 class="p-3 mb-0 bg-primary text-white">Thông tin cơ bản</h5>
+                <div class="p-3">
+                    <div class="form-group form-inline">
+                        <label for="sltType">Chuyên mục chính</label>
+                        <select name="" id="sltType" class="form-control">
+                            <option value="">Tin tuc</option>
+                            <option value="Biệt thự">Biệt thự</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="sltKind">Chuyên mục khác</label>
+                        <select name="" id="sltKind" class="form-control">
+                            <option value="">Du an mua</option>
+                            <option value="Cho thue">Cho thue</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" rows='1' type="text" class="form-control form-control-lg border-full" placeholder="Tiêu đề bài viêt"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border-full" placeholder="Tiêu đề phụ">
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btn btn-info mb-3" id="uploadImage"><i class="fal fa-file-image mr-2"></i>Ảnh đại diện</a>
+                        <img src="images/640x360-1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border-full" placeholder="Mô tả ảnh đại diện">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border-full" placeholder="Mô tả bài viết">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="sltAuthor">Tac gia</label>
+                        <select name="" id="sltAuthor" class="form-control">
+                            <option value="">Tin tuc</option>
+                            <option value="Biệt thự">Biệt thự</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtSource">Nguon tin</label>
+                        <input type="text" id="txtSource" class="form-control" placeholder="Nguon tin">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtOtherAuthor">Tac gia ngoai he thong</label>
+                        <input type="text" id="txtOtherAuthor" class="form-control" placeholder="Tac gia ngoai he thong">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtTime">Ngày giờ đăng</label>
+                        <input type="text" id="txtTime" class="form-control" placeholder="Ngày giờ đăng">
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Ngày giờ đăng tự động</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-content" id="navSeo">
+                <h5 class="p-3 mb-0 bg-success text-white">Thông tin SEO</h5>
+                <div class="p-3">
+                    <div class="form-group form-inline">
+                        <label for="txtSeoTitle">Tiêu đề SEO</label>
+                        <input type="text" id="txtSeoTitle" class="form-control" placeholder="Tiêu đề SEO">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtSeoDesc">Mô tả SEO</label>
+                        <input type="text" id="txtSeoDesc" class="form-control" placeholder="Mô tả SEO">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtTag">Tag bài viết</label>
+                        <input type="text" id="txtTag" class="form-control" placeholder="Tag bài viết">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtSeoKeyword">Từ khóa SEO</label>
+                        <input type="text" id="txtSeoKeyword" class="form-control" placeholder="Từ khóa SEO">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-content" id="navAdvance">
+                <h5 class="p-3 mb-0 bg-info text-white">NÂNG CAO</h5>
+                <div class="p-3">
+                    <div class="form-group form-inline">
+                        <label for="txtDisplayType">Kiểu hiển thị</label>
+                        <select name="" id="txtDisplayType" class="form-control border-full" placeholder="Kiểu hiển thị">
+                            <option>Tin video</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtAvatarDisplayType">Kiểu ảnh</label>
+                        <select name="" id="txtAvatarDisplayType" class="form-control border-full" placeholder="Kiểu ảnh">
+                            <option>Ảnh lớn</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtArticleType">Loại tin</label>
+                        <select name="" id="txtArticleType" class="form-control border-full" placeholder="Loại tin">
+                            <option>Ảnh lớn</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtUrlRedirect">Link liên kết</label>
+                        <input name="" id="txtUrlRedirect" class="form-control border-full" placeholder="Link liên kết">
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkNoDisplayAvatar">
+                            <label class="custom-control-label" for="chkNoDisplayAvatar">Hiển thị ảnh đại diện trong bài viết</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkAllowComment">
+                            <label class="custom-control-label" for="chkAllowComment">Cho phép bình luận bài viết</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkAllowAds">
+                            <label class="custom-control-label" for="chkAllowAds">Cho phép quảng cáo trên bài viết</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="chkIsPR">
+                            <label class="custom-control-label" for="chkIsPR">Là bài PR</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btn btn-info" id="uploadImage"><i class="fal fa-stream mr-2"></i>Chọn tin vào dòng sự kiện</a>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btn btn-info" id="uploadImage"><i class="fal fa-copy mr-2"></i>Chọn tin liên quan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-content" id="navRoyalty">
+                <h5 class="p-3 mb-0 bg-warning">Nhuận bút</h5>
+                <div class="p-3">
+                    <div class="form-group form-inline">
+                        <label for="txtRoyaltyType">Thể loại nội dung</label>
+                        <select name="" id="txtRoyaltyType" class="form-control border-full" placeholder="Thể loại nội dung">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtRoyaltyManufacture">Phương thức sản xuất</label>
+                        <select name="" id="txtRoyaltyManufacture" class="form-control border-full" placeholder="Phương thức sản xuất">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtTag">Tag bài viết</label>
+                        <input type="text" id="txtTag" class="form-control " placeholder="Tag bài viết">
+                    </div>
+                    <div class="form-group form-inline">
+                        <label for="txtRoyaltyKeyword">Từ khóa SEO</label>
+                        <input type="text" id="txtRoyaltyKeyword" class="form-control" placeholder="Từ khóa SEO">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal upload image -->
+    <section class="formDetail modal-xl" id="uploadImageWrap">
+        <div class="upload upload-wrap">
+            <div class="upload-nav">
+                <a class="nav-item" href="#" data-target="tabSearch"><i class="fal fa-search"></i></a>
+                <a class="nav-item is-active" href="#" data-target="tabUpload">Tải lên</a>
+                <a class="nav-item" href="#" data-target="tabImage">Ảnh</a>
+                <a class="nav-item" href="#" data-target="tabAlbum">Album</a>
+                <a class="nav-item" href="#" data-target="tabUrl">Địa chỉ web (URL)</a>
+            </div>
+            <div class="upload-content">
+                <!-- tab upload -->
+                <div class="tab-content" id="tabSearch">
+                    <div class="form-group">
+                        <label for="InputCategory">Lọc theo chuyên mục</label>
+                        <select name="" id="" class="form-control" id="InputCategory">
+                            <option value="" checked>Tất cả</option>
+                            <option value="" checked>Tin tức</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputExample">Expample</label>
+                        <input type="txt" class="form-control" id="InputExample" placeholder="Expample">
+                    </div>
+                    <div class="tab-footer">
+                        <div class="text-right">
+                            <a class="btn btn-primary btn-sm" id="btnInsert0">Apply</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content is-active" id="tabUpload">
+                    <div class="browseImg">Kéo ảnh vào đây</div>
+                    <div class="tab-footer">
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <p class="text-muted mb-1"><b>Ten anh</b></p>
+                                <div>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-window-restore mr-1"></i>800x450</span>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-info mr-1"></i>72Kb</span>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-history mr-1"></i>January 12th, 2011</span>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-user mr-1"></i>Admin</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 text-right">
+                                <a class="btn btn-dark btn-sm mr-2" id="btnCancel">Hủy</a>
+                                <a class="btn btn-primary btn-sm" id="btnInsert">Chèn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab líst image -->
+                <div class="tab-content" id="tabImage">
+                    <div class="image-desc">
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <input type="text" class="form-control border-full" placeholder="Caption anh">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <input type="text" class="form-control border-full" placeholder="Alt anh">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-list">
+                        <div class="row">
+                            <div class="col-6 col-md-2 image-item is-selected">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x960-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/469x264.png" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/479x532.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/120x90.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/120x90-2.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-md-2 image-item">
+                                <img src="images/640x360-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-footer">
+                        <div class="row">
+                            <div class="col-9 col-md-6">
+                                <p class="text-muted mb-1"><b>Ten anh</b></p>
+                                <div>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-window-restore mr-1"></i>800x450</span>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-info mr-1"></i>72Kb</span>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-history mr-1"></i>January 12th, 2011</span>
+                                    <span class="mr-2 bg-light p-1"><i class="fal fa-user mr-1"></i>Admin</span>
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-2">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-plus"></i> Album</a>
+                                    <div class="dropdown-menu">
+                                        <h6 class="dropdown-header">Thêm vào album</h6>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">Album1</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Album2</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">Album1</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Album2</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">Album1</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Album2</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">Album1</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Album2</label>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <h6 class="dropdown-header">Tạo mới</h6>
+                                        <div class="form-group dropdown-item">
+                                            <input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 text-right">
+                                <a class="btn btn-dark btn-sm mr-2" id="btnCancel1">Hủy</a>
+                                <a class="btn btn-primary btn-sm" id="btnInsert1">Chèn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tabImage"></div>
+                </div>
+                <!-- tab list ablum -->
+                <div class="tab-content" id="tabAlbum">
+                    <div class="album-breadcrumb mb-2">
+                        <span class="text-muted">Album</span> / <b>Project 1</b>
+                    </div>
+                    <div class="album-list">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                    <h5 class="title">Project</h5>
+                                    <div class="desc">8 images</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="album-item">
+                                    <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-footer">
+                        <div class="text-right">
+                            <a class="btn btn-dark btn-sm mr-2" id="btnCancel3">Hủy</a>
+                            <a class="btn btn-primary btn-sm" id="btnInsert3"><i class="fal fa-folder-open mr-1"></i>New album</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- url tab -->
+                <div class="tab-content" id="tabUrl">
+                    <input type="text" class="form-control" placeholder="Đường dẫn ảnh">
+                    <div class="tab-footer">
+                        <div class="text-right">
+                            <a class="btn btn-dark btn-sm mr-2" id="btnCancel4">Hủy</a>
+                            <a class="btn btn-primary btn-sm" id="btnInsert4">Chèn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div id="site-mask"></div>
+    <footer class="site-footer" id="site-footer"></footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="App_themes/js/vendor/jquery.min.js"></script>
+    <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="App_themes/js/vendor/jquery-ui.min.js"></script>
+    <script src="App_themes/js/app.js"></script>
+    <script src="App_themes/js/imf-dialog.js"></script>
+    <script>
+    var dialogDetail = new HDialog("uploadImageWrap", "Chèn ảnh");
+    $("#uploadImage").click(function() {
+        dialogDetail.Show();
+    });
+    var dialogProgress = new HDialog("progressUpload", "Đang tải lên... ");
+    $("#btnInsert").click(function() {
+        dialogProgress.Show();
+    });
+    </script>
+</body>
+
+</html>

@@ -96,12 +96,29 @@
     bottom: 0;
     background-color: #fff;
     display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-left: 1px solid #ddd;
+
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
 
     .column-nav {
         width: 48px;
         background-color: #fafafa;
-        border-left: 1px solid #ddd;
-
+        position: absolute;
+        top: 0;
+        bottom: 0;
     }
 
     .nav-item {
@@ -121,13 +138,26 @@
     .column-content {
         max-width: 300px;
         border-left: 1px solid #eee;
+        margin-left: 48px;
 
         .nav-content {
             display: none;
             width: 300px;
+            position: relative;
 
             &.is-active {
                 display: block;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -1px;
+                width: 1px;
+                background-color: #eee;
             }
         }
     }
@@ -144,7 +174,8 @@
         background: white;
         z-index: 3;
         border: 1px solid #ddd;
-        .nav-link{
+
+        .nav-link {
             padding: 0.25rem 0.5rem;
         }
     }
