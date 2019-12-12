@@ -2,7 +2,7 @@
     .container {
         max-width: 650px;
 
-        @include respond-above(md) {
+        @include respond-above(lg) {
             width: 650px;
         }
     }
@@ -16,6 +16,20 @@
     }
 
     .site-aside {
+        z-index: 3;
+
+        &.is-active {
+            display: block;
+
+            .column-content {
+                max-width: 250px;
+
+                .nav-content {
+                    width: 250px;
+                }
+            }
+        }
+
         @include respond-above(xxl) {
             .column-content {
                 max-width: 500px;

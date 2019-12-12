@@ -15,17 +15,18 @@
         background-color: $primary;
         height: 100%;
         padding: 0.5rem;
-        width: 120px;
+        width: 100px;
     }
 
     .content {
         display: flex;
         align-items: center;
-        width: calc(100% - 120px);
-        padding: 0.5rem;
+        width: calc(100% - 100px);
+        padding: 0.5rem 0.25rem;
     }
 
     #btn-search,
+    #btn-rightNav,
     #btn-expand {
         padding: 0 0.5rem;
         font-size: 1.5rem;
@@ -174,6 +175,7 @@
             padding: 0.5rem 1rem;
         }
 
+        #btn-rightNav,
         #btn-search,
         #btn-expand {
             display: none;
