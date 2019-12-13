@@ -5,7 +5,6 @@
     top: 3.5rem;
     left: 0;
     bottom: 0;
-    overflow-y: auto;
     background-color: #2E3842;
     display: none;
     z-index: 3;
@@ -42,6 +41,25 @@
         margin-bottom: 0;
     }
 
+    &-wrap {
+        overflow-y: auto;
+        height: 100%;
+
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            background-color: #555;
+        }
+    }
+
     .children {
         li {
             font-size: 0.875rem;
@@ -69,22 +87,66 @@
         }
     }
 
-    &::-webkit-scrollbar-track {
-        background-color: #fff;
-    }
-
-    &::-webkit-scrollbar {
-        width: 4px;
-        background-color: #F5F5F5;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: #555;
-    }
-
     @include respond-above(md) {
         display: block;
         width: 240px;
+    }
+
+    &__trigger {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+
+        .btn-trigger {
+            display: block;
+            border: 1px solid #ddd;
+            background: white;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            cursor: pointer;
+            text-align: center;
+
+            &:hover {
+                background-color: $primary;
+                color: white;
+                border: 1px solid darken($primary, 5%);
+            }
+
+            .alt {
+                display: none;
+            }
+        }
+    }
+
+    &.triggerable {
+        @media screen and(max-width: 1600px) {
+            right: 100%;
+            left: auto;
+
+            .site-nav__trigger {
+                display: block;
+            }
+
+            .site-nav-wrap {}
+
+            &.is-active {
+                .origin {
+                    display: none;
+                }
+
+                .alt {
+                    display: inline;
+                }
+
+                left: 0;
+
+                .origin {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -111,6 +173,7 @@
 
     &::-webkit-scrollbar-thumb {
         background-color: #555;
+        border-radius: 20px;
     }
 
     .column-nav {

@@ -37,6 +37,9 @@ $(function() {
     // click to toggle tab on right nav
     $('.site-aside .nav-item').on('click', rightNavClick);
 
+    // click to toggle tab on left nav
+    $('#siteNavTrigger').on('click', siteNavTriggerClick);
+
     // click to change tab on upload wrap
     $('.upload-wrap .nav-item').on('click', uploadTabClick);
 
@@ -197,4 +200,15 @@ function uploadTabClick(e) {
     $(this).siblings().removeClass('is-active');
     $(this).addClass('is-active');
     showTab(t);
+}
+
+/*trigger left nav in editor page*/
+function siteNavTriggerClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    triggerSiteNav();
+}
+
+function triggerSiteNav() {
+    $('.site-nav.triggerable').toggleClass('is-active');
 }

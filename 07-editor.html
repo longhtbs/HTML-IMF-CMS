@@ -85,111 +85,119 @@
         </div>
     </main>
     <!-- left navbar -->
-    <div class="site-nav">
-        <ul class="parent">
-            <li>
-                <h5>Bài viết</h5>
-                <ul class="children">
-                    <li class="is-active">
-                        <a href="/?cat=news-edit" title="Viết bài mới"><i class="fal fa-edit"></i> Viết bài mới</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-mylist" title="Bài của tôi"><i class="fal fa-book"></i> Bài của tôi (2)</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-waitforeditlist" title="Bài chờ biên tập"><i class="fal fa-clock"></i> Bài chờ biên tập (1)</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-receiveforeditlist" title="Bài nhận biên tập"><i class="fal fa-arrow-to-bottom"></i> Bài nhận biên tập (0)</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-waitforpublishlist" title="Bài chờ xuất bản"><i class="fal fa-hourglass-start"></i> Bài chờ xuất bản (0)</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-receiveforpublishlist" title="Bài nhận xuất bản"><i class="fal fa-download"></i> Bài nhận xuất bản (0)</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-publishlist" title="Bài đã xuất bản"><i class="fal fa-globe"></i> Bài đã xuất bản</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-returnlist" title="Bài trả lại"><i class="fal fa-undo"></i> Bài trả lại (3)</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-unpublishlist" title="Bài gỡ xuống"><i class="fal fa-cloud-download"></i> Bài gỡ xuống</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-deletelist" title="Bài đã xóa"><i class="fal fa-trash-alt"></i> Bài đã xóa</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h5>Khác</h5>
-                <ul class="children">
-                    <li>
-                        <a href="/?cat=tag-list" title="Quản lý tag"><i class="fal fa-tags"></i> Quản lý tag</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=event-list" title="Quản lý dòng sự kiện"><i class="fal fa-calendar-alt"></i> Quản lý dòng sự kiện</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=view-list" title="Thống kê truy cập"><i class="fal fa-eye"></i> Thống kê truy cập</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=money" title="Thống kê nhuận bút"><i class="fal fa-pen"></i> Thống kê nhuận bút</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=comment" title="Quản lý bình luận"><i class="fal fa-comments"></i> Quản lý bình luận</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h5>Quản lý chuyên mục</h5>
-                <ul class="children">
-                    <li>
-                        <a href="/?cat=category" title="Danh sách chuyên mục"><i class="fal fa-object-group"></i> Danh sách chuyên mục</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=category-config" title="Cấu hình chuyên mục"><i class="fal fa-cog"></i> Cấu hình chuyên mục</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=news-hot" title="Quản lý bài nổi bật"><i class="fal fa-tasks"></i> Quản lý bài nổi bật</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h5>Người dùng</h5>
-                <ul class="children">
-                    <li>
-                        <a href="/?cat=user-list" title="Danh sách người dùng"><i class="fal fa-users"></i> Danh sách người dùng</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=author-list" title="Quản lý tác giả"><i class="fal fa-user-alt"></i> Quản lý tác giả</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h5>Video</h5>
-                <ul class="children">
-                    <li>
-                        <a href="/?cat=video-list" title="Danh sách video"><i class="fal fa-video"></i> Danh sách video</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=videotype-list" title="Loại video"><i class="fal fa-file-video"></i> Loại video</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h5>Quảng cáo</h5>
-                <ul class="children">
-                    <li>
-                        <a href="/?cat=adv-list" title="Danh sách quảng cáo"><i class="fab fa-adversal"></i> Danh sách quảng cáo</a>
-                    </li>
-                    <li>
-                        <a href="/?cat=adv-type" title="Vị trí quảng cáo"><i class="fal fa-cogs"></i> Vị trí quảng cáo</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div class="site-nav triggerable">
+        <div class="site-nav-wrap">
+            <ul class="parent">
+                <li>
+                    <h5>Bài viết</h5>
+                    <ul class="children">
+                        <li class="is-active">
+                            <a href="/?cat=news-edit" title="Viết bài mới"><i class="fal fa-edit"></i> Viết bài mới</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-mylist" title="Bài của tôi"><i class="fal fa-book"></i> Bài của tôi (2)</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-waitforeditlist" title="Bài chờ biên tập"><i class="fal fa-clock"></i> Bài chờ biên tập (1)</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-receiveforeditlist" title="Bài nhận biên tập"><i class="fal fa-arrow-to-bottom"></i> Bài nhận biên tập (0)</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-waitforpublishlist" title="Bài chờ xuất bản"><i class="fal fa-hourglass-start"></i> Bài chờ xuất bản (0)</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-receiveforpublishlist" title="Bài nhận xuất bản"><i class="fal fa-download"></i> Bài nhận xuất bản (0)</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-publishlist" title="Bài đã xuất bản"><i class="fal fa-globe"></i> Bài đã xuất bản</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-returnlist" title="Bài trả lại"><i class="fal fa-undo"></i> Bài trả lại (3)</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-unpublishlist" title="Bài gỡ xuống"><i class="fal fa-cloud-download"></i> Bài gỡ xuống</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-deletelist" title="Bài đã xóa"><i class="fal fa-trash-alt"></i> Bài đã xóa</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h5>Khác</h5>
+                    <ul class="children">
+                        <li>
+                            <a href="/?cat=tag-list" title="Quản lý tag"><i class="fal fa-tags"></i> Quản lý tag</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=event-list" title="Quản lý dòng sự kiện"><i class="fal fa-calendar-alt"></i> Quản lý dòng sự kiện</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=view-list" title="Thống kê truy cập"><i class="fal fa-eye"></i> Thống kê truy cập</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=money" title="Thống kê nhuận bút"><i class="fal fa-pen"></i> Thống kê nhuận bút</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=comment" title="Quản lý bình luận"><i class="fal fa-comments"></i> Quản lý bình luận</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h5>Quản lý chuyên mục</h5>
+                    <ul class="children">
+                        <li>
+                            <a href="/?cat=category" title="Danh sách chuyên mục"><i class="fal fa-object-group"></i> Danh sách chuyên mục</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=category-config" title="Cấu hình chuyên mục"><i class="fal fa-cog"></i> Cấu hình chuyên mục</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=news-hot" title="Quản lý bài nổi bật"><i class="fal fa-tasks"></i> Quản lý bài nổi bật</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h5>Người dùng</h5>
+                    <ul class="children">
+                        <li>
+                            <a href="/?cat=user-list" title="Danh sách người dùng"><i class="fal fa-users"></i> Danh sách người dùng</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=author-list" title="Quản lý tác giả"><i class="fal fa-user-alt"></i> Quản lý tác giả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h5>Video</h5>
+                    <ul class="children">
+                        <li>
+                            <a href="/?cat=video-list" title="Danh sách video"><i class="fal fa-video"></i> Danh sách video</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=videotype-list" title="Loại video"><i class="fal fa-file-video"></i> Loại video</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h5>Quảng cáo</h5>
+                    <ul class="children">
+                        <li>
+                            <a href="/?cat=adv-list" title="Danh sách quảng cáo"><i class="fab fa-adversal"></i> Danh sách quảng cáo</a>
+                        </li>
+                        <li>
+                            <a href="/?cat=adv-type" title="Vị trí quảng cáo"><i class="fal fa-cogs"></i> Vị trí quảng cáo</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="site-nav__trigger">
+            <span class="btn-trigger" id="siteNavTrigger">
+                <i class="fal fa-angle-double-left alt"></i>
+                <i class="fal fa-angle-double-right origin"></i>
+            </span>
+        </div>
     </div>
     <!-- right navbar -->
     <div class="site-aside">
@@ -217,12 +225,15 @@
                             <option value="Cho thue">Cho thue</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <textarea name="" rows='1' type="text" class="form-control form-control-lg border-full" placeholder="Tiêu đề bài viêt"></textarea>
+                    <div class="form-group form-inline">
+                        <label for="txtArticleTitle">Tiêu đề bài viêt</label>
+                        <input id="txtArticleTitle" name="" rows='1' type="text" class="form-control border-full" placeholder="Tiêu đề bài viêt">
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control border-full" placeholder="Tiêu đề phụ">
+                    <div class="form-group form-inline">
+                        <label for="txtArticleTitleSub">Tiêu đề phụ</label>
+                        <input id="txtArticleTitleSub" name="" rows='1' type="text" class="form-control border-full" placeholder="Tiêu đề phụ">
                     </div>
+                    <hr>
                     <div class="form-group">
                         <a href="#" class="btn btn-info mb-3" id="uploadImage"><i class="fal fa-file-image mr-2"></i>Ảnh đại diện</a>
                         <img src="images/640x360-1.jpg" alt="" class="img-fluid">
@@ -628,8 +639,7 @@
     <footer class="site-footer" id="site-footer"></footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="App_themes/js/vendor/jquery.min.js"></script>
-    <script src="App_themes/bootstrap-4.3.1-dist/js/popper.min.js"></script>
-    <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="App_themes/js/vendor/jquery-ui.min.js"></script>
     <script src="App_themes/js/app.js"></script>
     <script src="App_themes/js/imf-dialog.js"></script>
