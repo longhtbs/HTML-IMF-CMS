@@ -66,257 +66,264 @@
     </header>
     <main class="site-content">
         <div class="container">
-            <ul class="nav bg-white" id="mainNav">
-                <li class="nav-item">
-                    <a href="#base" class="nav-link">Cơ bản</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#location" class="nav-link">Vị trí dự án</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#scale" class="nav-link">Quy mô dự án</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#time" class="nav-link">Thời gian bàn giao</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#utilities" class="nav-link">Tiện ích</a>
-                </li>
-            </ul>
-            <section class="box mt-3" id="base">
-                <div class="box__header">
-                    <h5 class="box__title">Cơ bản dự án</h5>
-                </div>
-                <div class="box__content">
-                    <div class="form-group">
-                        <label for="txtName">Tên </label>
-                        <input type="text" class="form-control form-control-lg" id="txtName" placeholder="Ten du an">
+            <div class="col-lg-8 mx-auto" id="mainColumn">
+                <ul class="nav bg-white cyan" id="mainNav">
+                    <li class="nav-item" data-id="base">
+                        <a href="#base" class="nav-link">Cơ bản</a>
+                    </li>
+                    <li class="nav-item" data-id="location">
+                        <a href="#location" class="nav-link">Vị trí dự án</a>
+                    </li>
+                    <li class="nav-item" data-id="scale">
+                        <a href="#scale" class="nav-link">Quy mô dự án</a>
+                    </li>
+                    <li class="nav-item" data-id="time">
+                        <a href="#time" class="nav-link">Thời gian bàn giao</a>
+                    </li>
+                    <li class="nav-item" data-id="utilities">
+                        <a href="#utilities" class="nav-link">Tiện ích</a>
+                    </li>
+                </ul>
+                <section class="box mt-3" id="base">
+                    <div class="box__header cyan">
+                        <h5 class="box__title">Cơ bản dự án</h5>
                     </div>
-                    <div class="form-group form-inline">
-                        <label for="sltType">Kieu du an</label>
-                        <select name="" id="sltType" class="form-control border-full">
-                            <option value="">Kiểu nhà</option>
-                            <option value="Biệt thự">Biệt thự</option>
-                        </select>
+                    <div class="box__content">
+                        <div class="form-group">
+                            <label for="txtName">Tên </label>
+                            <input type="text" class="form-control form-control-lg" id="txtName" placeholder="Ten du an">
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="sltType">Kieu du an</label>
+                            <select name="" id="sltType" class="form-control border-full">
+                                <option value="">Kiểu nhà</option>
+                                <option value="Biệt thự">Biệt thự</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="sltKind">Phan loai</label>
+                            <select name="" id="sltKind" class="form-control border-full">
+                                <option value="">Du an mua</option>
+                                <option value="Cho thue">Cho thue</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label for="sltKind">Chủ đầu tư</label>
+                            <select name="" id="sltKind" class="form-control border-full">
+                                <option value="">VinGroup</option>
+                                <option value="Cho thue">Sungroup</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
                     </div>
-                    <div class="form-group form-inline">
-                        <label for="sltKind">Phan loai</label>
-                        <select name="" id="sltKind" class="form-control border-full">
-                            <option value="">Du an mua</option>
-                            <option value="Cho thue">Cho thue</option>
-                        </select>
+                </section>
+                <section class="box mt-5" id="location">
+                    <div class="box__header cyan">
+                        <h5 class="box__title">Vị trí dự án</h5>
                     </div>
-                    <div class="form-group form-inline">
-                        <label for="sltKind">Chủ đầu tư</label>
-                        <select name="" id="sltKind" class="form-control border-full">
-                            <option value="">VinGroup</option>
-                            <option value="Cho thue">Sungroup</option>
-                        </select>
+                    <div class="box__content">
+                        <p> <a class="btn btn-link" data-toggle="collapse" href="#collapseMap" role="button" aria-expanded="false" aria-controls="collapseMap"> Mở rộng <i class="fal fa-angle-down"></i> </a> </p>
+                        <div class="collapse" id="collapseMap">
+                            <div class="card card-body">Bản đồ đây nhé anh Sơn</div>
+                        </div>
+                </section>
+                <section class="box mt-5" id="scale">
+                    <div class="box__header cyan">
+                        <h5 class="box__title">Quy mô dự án</h5>
                     </div>
-                    <hr>
-                    <div contenteditable="true" class="editor" style="height:250px; width: 100%; padding:1rem">Editor</div>
-                </div>
-            </section>
-            <section class="box mt-5" id="location">
-                <div class="box__header secondary">
-                    <h5 class="box__title">Vị trí dự án</h5>
-                </div>
-                <div class="box__content">
-                    <p> <a class="btn btn-link" data-toggle="collapse" href="#collapseMap" role="button" aria-expanded="false" aria-controls="collapseMap"> Mở rộng <i class="fal fa-angle-down"></i> </a> </p>
-                    <div class="collapse" id="collapseMap">
-                        <div class="card card-body">Bản đồ đây nhé anh Sơn</div>
-                    </div>
-            </section>
-            <section class="box mt-5" id="scale">
-                <div class="box__header red">
-                    <h5 class="box__title">Quy mô dự án</h5>
-                </div>
-                <div class="box__content">
-                    <div class="row">
-                        <div class="col-md-8 mb-3">
-                            <div class="form-group form-inline">
-                                <label class="" for="txtAreaNumber">Tổng diện tích</label>
-                                <input type="text" id="txtAreaNumber" class="form-control col-8">
+                    <div class="box__content">
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <div class="form-group form-inline">
+                                    <label class="" for="txtAreaNumber">Tổng diện tích</label>
+                                    <input type="text" id="txtAreaNumber" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="custom-control custom-radio custom-control-inline mt-2">
+                                    <input type="radio" id="rdoAreaHA" name="rdoArea" class="custom-control-input">
+                                    <label class="custom-control-label" for="rdoAreaHA">hecta</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline mt-2">
+                                    <input type="radio" id="rdoAreaM2" name="rdoArea" class="custom-control-input">
+                                    <label class="custom-control-label" for="rdoAreaM2">m²</label>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="custom-control custom-radio custom-control-inline mt-2">
-                                <input type="radio" id="rdoAreaHA" name="rdoArea" class="custom-control-input">
-                                <label class="custom-control-label" for="rdoAreaHA">hecta</label>
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <div class="form-group form-inline">
+                                    <label class="" for="txtdensityNumber">Mật độ xây dựng</label>
+                                    <input type="text" id="txtdensityNumber" class="form-control">
+                                </div>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline mt-2">
-                                <input type="radio" id="rdoAreaM2" name="rdoArea" class="custom-control-input">
-                                <label class="custom-control-label" for="rdoAreaM2">m²</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 mb-3">
-                            <div class="form-group form-inline">
-                                <label class="" for="txtdensityNumber">Mật độ xây dựng</label>
-                                <input type="text" id="txtdensityNumber" class="form-control col-8">
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="custom-control custom-radio custom-control-inline mt-2">
-                                <input type="radio" id="rdodensityPercent" name="rdoArea" class="custom-control-input">
-                                <label class="custom-control-label" for="rdodensityPercent">hecta</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline mt-2">
-                                <input type="radio" id="rdodensityM2" name="rdoArea" class="custom-control-input">
-                                <label class="custom-control-label" for="rdodensityM2">m²</label>
+                            <div class="col-md-4 mb-3">
+                                <div class="custom-control custom-radio custom-control-inline mt-2">
+                                    <input type="radio" id="rdodensityPercent" name="rdoArea" class="custom-control-input">
+                                    <label class="custom-control-label" for="rdodensityPercent">hecta</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline mt-2">
+                                    <input type="radio" id="rdodensityM2" name="rdoArea" class="custom-control-input">
+                                    <label class="custom-control-label" for="rdodensityM2">m²</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 mb-3">
-                            <div class="form-group form-inline">
-                                <label class="" for="txtFloor">Số tầng</label>
-                                <input type="text" id="txtFloor" class="form-control col-9">
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <div class="form-group form-inline">
+                                    <label class="" for="txtFloor">Số tầng</label>
+                                    <input type="text" id="txtFloor" class="form-control">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 mb-3">
-                            <div class="form-group form-inline">
-                                <label class="" for="txtBasement">Số hầm</label>
-                                <input type="text" id="txtBasement" class="form-control col-9">
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <div class="form-group form-inline">
+                                    <label class="" for="txtBasement">Số hầm</label>
+                                    <input type="text" id="txtBasement" class="form-control">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 mb-3">
-                            <div class="form-group form-inline">
-                                <label class="" for="txtApartment">Số căn</label>
-                                <input type="text" id="txtApartment" class="form-control col-9">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="box mt-5" id="time">
-                <div class="box__header yellow">
-                    <h5 class="box__title">Thời gian bàn giao</h5>
-                </div>
-                <div class="box__content">
-                    <div class="row">
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="form-group row">
-                                <label class="col-4 text-right" for="sltWave">Đợt Bàn giao</label>
-                                <select name="" id="sltWave" class="form-control border-full col-8">
-                                    <option>Đợt 1</option>
-                                    <option>Đợt 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="form-group row">
-                                <label class="col-4 text-right" for="sltQuarter">Quý</label>
-                                <select name="" id="sltQuarter" class="form-control border-full col-8">
-                                    <option>Quý 1</option>
-                                    <option>Quý 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-3">
-                            <div class="form-group row">
-                                <label class="col-4 text-right" for="sltYear">Năm</label>
-                                <select name="" id="sltYear" class="form-control border-full col-8">
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-3 text-right">
-                            <a href="#" class="btn btn-primary"><i class="fal fa-plus mr-2"></i>Add</a>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Đợt</th>
-                                    <th scope="col">Quý</th>
-                                    <th scope="col">Năm</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Quy II</td>
-                                    <td>2019</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Quy III</td>
-                                    <td>2020</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <section class="box mt-5" id="utilities">
-                <div class="box__header cyan">
-                    <h5 class="box__title">Tiện ích</h5>
-                </div>
-                <div class="box__content">
-                    <div class="row">
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">Công viên</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                <label class="custom-control-label" for="customCheck2">Bể bơi</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                <label class="custom-control-label" for="customCheck3">Sân chơi trẻ em</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                <label class="custom-control-label" for="customCheck4">Trung tâm thương mại</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                <label class="custom-control-label" for="customCheck5">Công viên</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                <label class="custom-control-label" for="customCheck6">Bể bơi</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                <label class="custom-control-label" for="customCheck7">Sân chơi trẻ em</label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-2">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                <label class="custom-control-label" for="customCheck8">Trung tâm thương mại</label>
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <div class="form-group form-inline">
+                                    <label class="" for="txtApartment">Số căn</label>
+                                    <input type="text" id="txtApartment" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <section class="box mt-5" id="time">
+                    <div class="box__header cyan">
+                        <h5 class="box__title">Thời gian bàn giao</h5>
+                    </div>
+                    <div class="box__content">
+                        <div class="row">
+                            <div class="col-6 col-md-3 mb-3">
+                                <div class="form-group mb-0">
+                                    <label class="text-right" for="sltWave">Đợt Bàn giao</label>
+                                    <select name="" id="sltWave" class="form-control border-full">
+                                        <option>Đợt 1</option>
+                                        <option>Đợt 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-3">
+                                <div class="form-group mb-0">
+                                    <label class="text-right" for="sltQuarter">Quý</label>
+                                    <select name="" id="sltQuarter" class="form-control border-full">
+                                        <option>Quý 1</option>
+                                        <option>Quý 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-3">
+                                <div class="form-group mb-0">
+                                    <label class="text-right" for="sltYear">Năm</label>
+                                    <select name="" id="sltYear" class="form-control border-full">
+                                        <option>2019</option>
+                                        <option>2020</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-3">
+                                <div class="form-group mb-0">
+                                    <br>
+                                    <a href="#" class="btn btn-primary"><i class="fal fa-plus mr-2"></i>Add</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Đợt</th>
+                                        <th scope="col">Quý</th>
+                                        <th scope="col">Năm</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Quy II</td>
+                                        <td>2019</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Quy III</td>
+                                        <td>2020</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <section class="box mt-5" id="utilities">
+                    <div class="box__header cyan">
+                        <h5 class="box__title">Tiện ích</h5>
+                    </div>
+                    <div class="box__content">
+                        <div class="row">
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Công viên</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">Bể bơi</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3">Sân chơi trẻ em</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                    <label class="custom-control-label" for="customCheck4">Trung tâm thương mại</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                    <label class="custom-control-label" for="customCheck5">Công viên</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                    <label class="custom-control-label" for="customCheck6">Bể bơi</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                    <label class="custom-control-label" for="customCheck7">Sân chơi trẻ em</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 mb-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                    <label class="custom-control-label" for="customCheck8">Trung tâm thương mại</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-5" id="empty" style="height:600px; visibility: hidden;"></section>
+            </div>
         </div>
     </main>
     <!-- left navbar -->
-    <div class="site-nav"><div class="site-nav-wrap">
+    <div class="site-nav">
+        <div class="site-nav-wrap">
             <ul class="parent">
                 <li>
                     <h5>Bài viết</h5>
@@ -421,7 +428,8 @@
                     </ul>
                 </li>
             </ul>
-        </div></div>
+        </div>
+    </div>
     <!-- right navbar -->
     <div class="site-aside">
         <div class="column-nav">
@@ -465,19 +473,52 @@
     var mainNavHeight = $('#mainNav').outerHeight();
     var mainNavoffsetTop = $('#mainNav').offset().top;
     var mainNavoffsetLeft = $('#mainNav').offset().left;
-    var bsContainer = $('.container').width();
+    var bsContainer = $('#mainColumn').width();
 
     function windowScroll() {
         if (document.body.scrollTop > (mainNavHeight + mainNavoffsetTop) || document.documentElement.scrollTop > (mainNavHeight + mainNavoffsetTop)) {
             $('#mainNav').addClass('is-pinned').css({ 'top': mainNavoffsetTop + 'px', 'left': mainNavoffsetLeft + 'px', 'width': bsContainer + 'px' });
+            $('#mainColumn').css('padding-top', mainNavHeight);
         } else {
             mainNavHeight = $('#mainNav').outerHeight();
             mainNavoffsetTop = $('#mainNav').offset().top;
             mainNavoffsetLeft = $('#mainNav').offset().left;
-            bsContainer = $('.container').width();
+            bsContainer = $('#mainColumn').width();
+            $('#mainColumn').removeAttr('style');
             $("#mainNav").removeClass('is-pinned');
         }
     }
+
+    var sections = $('section,box'),
+        nav = $('#mainNav'),
+        nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function() {
+        var cur_pos = $(this).scrollTop();
+        sections.each(function() {
+            var top = $(this).offset().top,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= (top - 150) && cur_pos <= (bottom - 150)) {
+                nav.find('li').removeClass('is-active');
+                sections.removeClass('is-active');
+
+                $(this).addClass('is-active');
+                nav.find('a[href="#' + $(this).attr('id') + '"]').parent("li").addClass('is-active');
+            }
+        });
+    });
+
+    nav.find('a').on('click', function() {
+        var $el = $(this),
+            id = $el.attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - 150
+        }, 'fast');
+
+        return false;
+    });
     </script>
 </body>
 

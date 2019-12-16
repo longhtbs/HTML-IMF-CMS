@@ -232,6 +232,9 @@
 
 // main nav
 #mainNav {
+    margin-left: auto;
+    margin-right: auto;
+
     &.is-pinned {
         position: fixed;
         background: white;
@@ -240,6 +243,24 @@
 
         .nav-link {
             padding: 0.25rem 0.5rem;
+        }
+    }
+
+    .nav-item {
+        &.is-active {
+            background-color: $primary;
+
+            .nav-link {
+                color: white;
+            }
+        }
+    }
+
+    &.cyan {
+        .nav-item {
+            &.is-active {
+                background-color: $cyan;
+            }
         }
     }
 }
