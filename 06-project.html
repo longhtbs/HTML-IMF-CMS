@@ -477,7 +477,7 @@
 
     function windowScroll() {
         if (document.body.scrollTop > (mainNavHeight + mainNavoffsetTop) || document.documentElement.scrollTop > (mainNavHeight + mainNavoffsetTop)) {
-            $('#mainNav').addClass('is-pinned').css({ 'top': mainNavoffsetTop + 'px', 'left': mainNavoffsetLeft + 'px', 'width': bsContainer + 'px' });
+            $('#mainNav').addClass('is-pinned').css({ 'top': mainNavoffsetTop - 15 + 'px', 'left': mainNavoffsetLeft + 'px', 'width': bsContainer + 'px' });
             $('#mainColumn').css('padding-top', mainNavHeight);
         } else {
             mainNavHeight = $('#mainNav').outerHeight();
