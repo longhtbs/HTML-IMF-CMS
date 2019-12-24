@@ -62,7 +62,7 @@
         .story__thumb {}
 
         .story__header {
-            overflow: hidden;
+            // overflow: hidden;
         }
 
         .story__aside {
@@ -77,6 +77,27 @@
 
         .story__extend {
             margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+
+            .btn-dropdown {
+                font-size: 2em;
+                margin-left: 0.25rem;
+                padding: 0.125rem 0.5rem;
+                cursor: pointer;
+                    background-color: #f9f9f9;
+                
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+
+            .dropdown-item {
+                font-size: 0.875rem;
+                .fal{
+                    font-size: 1rem;
+                }
+            }
         }
 
         &+.story--left {

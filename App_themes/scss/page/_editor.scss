@@ -1,9 +1,9 @@
 .page-editor {
     .container {
-        max-width: calc(650px + 4rem + 2px);
+        max-width: calc(691px + 4rem + 2px);
 
         @include respond-above(lg) {
-            width: calc(650px + 4rem + 2px);
+            width: calc(691px + 4rem + 2px);
         }
     }
 
@@ -46,7 +46,7 @@
 }
 
 .editor {
-    max-width: 650px;
+    max-width: 691px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ddd;
