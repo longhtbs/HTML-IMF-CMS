@@ -69,6 +69,7 @@
             border: 1px solid transparent;
             position: relative;
             height: 6rem;
+            cursor: pointer;
 
             &:hover {
                 border-color: #ddd;
@@ -82,6 +83,7 @@
                     font-family: 'Font Awesome 5 Pro';
                     content: '';
                     position: absolute;
+                    font-size: 1.25rem;
                     top: 8px;
                     right: 8px;
                     font-weight: bold;
@@ -118,6 +120,7 @@
         .album-item {
             border: 1px solid #ddd;
             margin-bottom: 0.5rem;
+            cursor: pointer;
 
             img {
                 max-height: 7.5rem;
@@ -139,12 +142,17 @@
                 padding: 0 0.5rem 0.5rem;
             }
 
+            &:hover {
+                border-color: #ccc;
+            }
+
             &.is-selected {
 
                 &::before,
                 &::after {
                     display: block;
                     font-family: 'Font Awesome 5 Pro';
+                    font-size: 1.25rem;
                     content: '';
                     position: absolute;
                     top: 8px;
