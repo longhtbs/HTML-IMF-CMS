@@ -67,6 +67,7 @@
     </header>
     <main class="site-content">
         <div class="container">
+            <!-- button upload image -->
             <a href="#" class="btn btn-info" id="uploadImage">Upload image</a>
             <!-- modal upload image -->
             <section class="formDetail modal-xl" id="uploadImageWrap">
@@ -335,6 +336,271 @@
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
                 </div>
             </section>
+            <!-- button upload video -->
+            <a href="#" class="btn btn-success" id="uploadVideo">Upload Video</a>
+            <!-- modal upload image -->
+            <section class="formDetail modal-xl" id="uploadVideoWrap">
+                <div class="upload upload-wrap">
+                    <div class="upload-nav">
+                        <a class="nav-item" href="#" data-target="tabSearch1"><i class="fal fa-search"></i></a>
+                        <a class="nav-item is-active" href="#" data-target="tabUpload1">Tải lên</a>
+                        <a class="nav-item" href="#" data-target="tabImage1">Ảnh</a>
+                        <a class="nav-item" href="#" data-target="tabAlbum1">Album</a>
+                        <a class="nav-item" href="#" data-target="tabUrl1
+                        ">Địa chỉ web (URL)</a>
+                    </div>
+                    <div class="upload-content">
+                        <!-- tab upload -->
+                        <div class="tab-content" id="tabSearch1">
+                            <div class="form-group">
+                                <label for="InputCategory">Lọc theo chuyên mục</label>
+                                <select name="" id="" class="form-control" id="InputCategory">
+                                    <option value="" checked>Tất cả</option>
+                                    <option value="" checked>Tin tức</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputExample">Expample</label>
+                                <input type="txt" class="form-control" id="InputExample" placeholder="Expample">
+                            </div>
+                            <div class="tab-footer">
+                                <div class="text-right">
+                                    <a class="btn btn-primary btn-sm" id="btnInsert0">Apply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content is-active" id="tabUpload1">
+                            <div class="browseImg">Kéo ảnh vào đây</div>
+                            <div class="tab-footer">
+                                <div class="row">
+                                    <div class="col-12 col-md-8">
+                                        <p class="text-muted mb-1"><b>Ten anh</b></p>
+                                        <div>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-window-restore mr-1"></i>800x450</span>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-info mr-1"></i>72Kb</span>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-history mr-1"></i>January 12th, 2011</span>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-user mr-1"></i>Admin</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-right">
+                                        <a class="btn btn-dark btn-sm mr-2" id="btnCancel">Hủy</a>
+                                        <a class="btn btn-primary btn-sm" id="btnInsert">Chèn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab líst image -->
+                        <div class="tab-content" id="tabImage1">
+                            <div class="image-desc">
+                                <div class="row">
+                                    <div class="col-md-8 mb-3">
+                                        <input type="text" class="form-control border-full" placeholder="Caption anh">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" class="form-control border-full" placeholder="Alt anh">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-list">
+                                <div class="row">
+                                    <div class="col-6 col-md-2 image-item is-selected">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x960-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/469x264.png" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/479x532.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/120x90.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/120x90-2.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 col-md-2 image-item">
+                                        <img src="images/640x360-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-footer">
+                                <div class="row">
+                                    <div class="col-9 col-md-6">
+                                        <p class="text-muted mb-1"><b>Ten anh</b></p>
+                                        <div>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-window-restore mr-1"></i>800x450</span>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-info mr-1"></i>72Kb</span>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-history mr-1"></i>January 12th, 2011</span>
+                                            <span class="mr-2 bg-light p-1"><i class="fal fa-user mr-1"></i>Admin</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-md-2">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-sm btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-plus"></i> Album</a>
+                                            <div class="dropdown-menu">
+                                                <h6 class="dropdown-header">Thêm vào album</h6>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">Album1</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                        <label class="custom-control-label" for="customCheck2">Album2</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">Album1</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                        <label class="custom-control-label" for="customCheck2">Album2</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">Album1</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                        <label class="custom-control-label" for="customCheck2">Album2</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">Album1</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                        <label class="custom-control-label" for="customCheck2">Album2</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                                <h6 class="dropdown-header">Tạo mới</h6>
+                                                <div class="form-group dropdown-item">
+                                                    <input type="text" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-right">
+                                        <a class="btn btn-dark btn-sm mr-2" id="btnCancel1">Hủy</a>
+                                        <a class="btn btn-primary btn-sm" id="btnInsert1">Chèn</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tabImage"></div>
+                        </div>
+                        <!-- tab list ablum -->
+                        <div class="tab-content" id="tabAlbum1">
+                            <div class="album-breadcrumb mb-2">
+                                <span class="text-muted">Album</span> / <b>Project 1</b>
+                            </div>
+                            <div class="album-list">
+                                <div class="row">
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x960.jpg" alt="">
+                                            <h5 class="title">Project</h5>
+                                            <div class="desc">8 images</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item is-selected">
+                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                            <h5 class="title">Project</h5>
+                                            <div class="desc">8 images</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                            <h5 class="title">Project</h5>
+                                            <div class="desc">8 images</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                            <h5 class="title">Project</h5>
+                                            <div class="desc">8 images</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                            <h5 class="title">Project</h5>
+                                            <div class="desc">8 images</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x360-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="album-item">
+                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-footer">
+                                <div class="text-right">
+                                    <a class="btn btn-dark btn-sm mr-2" id="btnCancel3">Hủy</a>
+                                    <a class="btn btn-primary btn-sm" id="btnInsert3"><i class="fal fa-folder-open mr-1"></i>New album</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- url tab -->
+                        <div class="tab-content" id="tabUrl1">
+                            <input type="text" class="form-control" placeholder="Đường dẫn ảnh">
+                            <div class="tab-footer">
+                                <div class="text-right">
+                                    <a class="btn btn-dark btn-sm mr-2" id="btnCancel4">Hủy</a>
+                                    <a class="btn btn-primary btn-sm" id="btnInsert4">Chèn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
         </div>
     </main>
     <!-- left navbar -->
@@ -488,6 +754,10 @@
     var dialogProgress = new HDialog("progressUpload", "Đang tải lên... ");
     $("#btnInsert").click(function() {
         dialogProgress.Show();
+    });
+    var dialogDetail = new HDialog("uploadVideoWrap", "Chèn video");
+    $("#uploadVideo").click(function() {
+        dialogDetail.Show();
     });
     </script>
 </body>

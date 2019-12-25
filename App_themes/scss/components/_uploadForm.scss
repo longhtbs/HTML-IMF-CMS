@@ -75,7 +75,25 @@
             }
 
             &.is-selected {
-                border-color: $primary;
+
+                &::before,
+                &::after {
+                    display: block;
+                    font-family: 'Font Awesome 5 Pro';
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    font-weight: bold;
+                    color: white;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: '';
+                    color: $blue;
+                    z-index: 2;
+                }
             }
 
             img {
@@ -122,7 +140,25 @@
             }
 
             &.is-selected {
-                border-color: $primary;
+
+                &::before,
+                &::after {
+                    display: block;
+                    font-family: 'Font Awesome 5 Pro';
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    right: 18px;
+                    font-weight: bold;
+                    color: white;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: '';
+                    color: $blue;
+                    z-index: 2;
+                }
             }
         }
     }
