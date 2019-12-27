@@ -344,10 +344,8 @@
                     <div class="upload-nav">
                         <a class="nav-item" href="#" data-target="tabSearch1"><i class="fal fa-search"></i></a>
                         <a class="nav-item is-active" href="#" data-target="tabUpload1">Tải lên</a>
-                        <a class="nav-item" href="#" data-target="tabImage1">Ảnh</a>
-                        <a class="nav-item" href="#" data-target="tabAlbum1">Album</a>
-                        <a class="nav-item" href="#" data-target="tabUrl1
-                        ">Địa chỉ web (URL)</a>
+                        <a class="nav-item" href="#" data-target="tabImage1">Video</a>
+                        <a class="nav-item" href="#" data-target="tabUrl1">Nhúng Youtube</a>
                     </div>
                     <div class="upload-content">
                         <!-- tab upload -->
@@ -370,11 +368,36 @@
                             </div>
                         </div>
                         <div class="tab-content is-active" id="tabUpload1">
-                            <div class="browseImg">Kéo ảnh vào đây</div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="browseImg mt-3">Kéo video vào đây</div>
+                                    <hr>
+                                    <p><b>Hình đại diện</b></p>
+                                    <p>Chọn hoặc tải một hình ảnh lên để thể hiện nội dung trong video của bạn.</p>
+                                    <a href="#" class="btn btn-info" id="uploadImage1">Upload image</a>
+                                    <hr>
+                                    <p><b>Hình đại diện từ video</b></p>
+                                    <p>Chọn hoặc tải một hình ảnh lên để thể hiện nội dung trong video của bạn.</p>
+                                    <div id="avatar-list" class="avatar-list images-chosen">
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/admin/12252019/surprised-shocked-animals-funny-6__700.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/12192019/photo-1-1576742032547783667869_0f2ed663.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/12192019/dangtindatnen-1576722213242224672481_01949310.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/admin/12252019/157a1806-6d50-4524-b162-6e649bef96d5.png"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/admin/12252019/maxresdefault_1.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/admin/12252019/surprised-shocked-animals-funny-6__700.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/12192019/photo-1-1576742032547783667869_0f2ed663.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/12192019/dangtindatnen-1576722213242224672481_01949310.jpg"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/admin/12252019/157a1806-6d50-4524-b162-6e649bef96d5.png"></div>
+                                        <div class="item drop-item" ondragstart="dragstart_handler(event,this);" ondrop="drop_handler(event,this);" ondragover="dragover_handler(event,this);" draggable="true"><span class="remove"></span><img src="http://static.thedeal.vn/images/upload/admin/12252019/maxresdefault_1.jpg"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                </div>
+                            </div>
                             <div class="tab-footer">
                                 <div class="row">
                                     <div class="col-12 col-md-8">
-                                        <p class="text-muted mb-1"><b>Ten anh</b></p>
+                                        <p class="text-muted mb-1"><b>Ten video</b></p>
                                         <div>
                                             <span class="mr-2 bg-light p-1"><i class="fal fa-window-restore mr-1"></i>800x450</span>
                                             <span class="mr-2 bg-light p-1"><i class="fal fa-info mr-1"></i>72Kb</span>
@@ -394,10 +417,10 @@
                             <div class="image-desc">
                                 <div class="row">
                                     <div class="col-md-8 mb-3">
-                                        <input type="text" class="form-control border-full" placeholder="Caption anh">
+                                        <input type="text" class="form-control border-full" placeholder="Caption Video">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <input type="text" class="form-control border-full" placeholder="Alt anh">
+                                        <input type="text" class="form-control border-full" placeholder="Alt Video">
                                     </div>
                                 </div>
                             </div>
@@ -447,7 +470,7 @@
                             <div class="tab-footer">
                                 <div class="row">
                                     <div class="col-9 col-md-6">
-                                        <p class="text-muted mb-1"><b>Ten anh</b></p>
+                                        <p class="text-muted mb-1"><b>Ten video</b></p>
                                         <div>
                                             <span class="mr-2 bg-light p-1"><i class="fal fa-window-restore mr-1"></i>800x450</span>
                                             <span class="mr-2 bg-light p-1"><i class="fal fa-info mr-1"></i>72Kb</span>
@@ -523,75 +546,9 @@
                             </div>
                             <div class="tab-content" id="tabImage"></div>
                         </div>
-                        <!-- tab list ablum -->
-                        <div class="tab-content" id="tabAlbum1">
-                            <div class="album-breadcrumb mb-2">
-                                <span class="text-muted">Album</span> / <b>Project 1</b>
-                            </div>
-                            <div class="album-list">
-                                <div class="row">
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x960.jpg" alt="">
-                                            <h5 class="title">Project</h5>
-                                            <div class="desc">8 images</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item is-selected">
-                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
-                                            <h5 class="title">Project</h5>
-                                            <div class="desc">8 images</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x360-1.jpg" alt="">
-                                            <h5 class="title">Project</h5>
-                                            <div class="desc">8 images</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
-                                            <h5 class="title">Project</h5>
-                                            <div class="desc">8 images</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x360-1.jpg" alt="">
-                                            <h5 class="title">Project</h5>
-                                            <div class="desc">8 images</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x360-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="album-item">
-                                            <img class="img-fluid" src="images/640x360-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-footer">
-                                <div class="text-right">
-                                    <a class="btn btn-dark btn-sm mr-2" id="btnCancel3">Hủy</a>
-                                    <a class="btn btn-primary btn-sm" id="btnInsert3"><i class="fal fa-folder-open mr-1"></i>New album</a>
-                                </div>
-                            </div>
-                        </div>
                         <!-- url tab -->
                         <div class="tab-content" id="tabUrl1">
-                            <input type="text" class="form-control" placeholder="Đường dẫn ảnh">
+                            <input type="text" class="form-control border-full" placeholder="Đường dẫn Youtube">
                             <div class="tab-footer">
                                 <div class="text-right">
                                     <a class="btn btn-dark btn-sm mr-2" id="btnCancel4">Hủy</a>
