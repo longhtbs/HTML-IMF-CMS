@@ -76,12 +76,12 @@ h2.title {
     &.form-inline {
         align-items: flex-end;
 
-        label {
+        &>label {
             width: 25%;
             justify-content: flex-start;
         }
 
-        .form-control {
+        &>.form-control {
             width: 73%;
             margin-left: auto;
         }
@@ -91,4 +91,47 @@ h2.title {
 .grecaptcha-badge {
     visibility: collapse !important;
     display: none !important;
+}
+
+.list-text {
+    .labelSmall {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    .ulNewsRelation {
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+            padding-left: 24px;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .delete {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-right: 10px;
+            color: $red;
+
+            &::before {
+                font-family: "Font Awesome 5 Pro";
+                content: '';
+                display: inline;
+            }
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
 }

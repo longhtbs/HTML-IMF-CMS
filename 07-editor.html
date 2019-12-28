@@ -353,10 +353,20 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <a href="#" class="btn btn-info" id="uploadImage"><i class="fal fa-stream mr-2"></i>Chọn tin vào dòng sự kiện</a>
+                        <a href="#" class="btn btn-info" id="addTimeline"><i class="fal fa-stream mr-2"></i>Chọn tin vào dòng sự kiện</a>
                     </div>
+                    <hr>
                     <div class="form-group">
-                        <a href="#" class="btn btn-success" id="uploadImage"><i class="fal fa-copy mr-2"></i>Chọn tin liên quan</a>
+                        <a href="#" class="btn btn-success" id="selectRelated"><i class="fal fa-copy mr-2"></i>Chọn tin liên quan</a>
+                    </div>
+                    <div class="group-input list-text">
+                        <span class="labelSmall">Tin liên quan</span>
+                        <div id="relatedNews">
+                            <ul class="ulNewsRelation" id="ulNewsRelation">
+                                <li>Trước giờ tuyên án, nộp đủ 3 triệu USD nhận hối lộ, cựu Bộ trưởng Nguyễn Bắc Son có thoát án tử?<span class="delete"></span></li>
+                                <li>TP HCM là nơi đáng sống thứ 3 trên thế giới<span class="delete"></span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -643,6 +653,66 @@
                 </div>
             </div>
     </section>
+    <!-- modal upload image -->
+    <section class="formDetail modal-lg" id="selectRelatedModal">
+        <div class="row mb-3">
+            <div class="col-md-6 mb-2">
+                <input name="" id="txtSearchRelated" class="form-control border-full" placeholder="Keywords...">
+            </div>
+            <div class="col-md-4 mb-2">
+                <select class="form-control border-full">
+                    <option>Tất cả chuyên mục</option>
+                    <option>Thời sự</option>
+                </select>
+            </div>
+            <div class="col-md-2 mb-2 text-right">
+                <a href="#" class="btn btn-sm btn-light"><i class="fal fa-angle-left"></i></a>
+                <a href="#" class="btn btn-sm btn-primary"><i class="fal fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="story-listing">
+            <article class="story story--is-checkable">
+                <figure class="story__thumb"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></figure>
+                <div class="story__header">
+                    <h3 class="story__title">Tiêu đề bài viết</h3>
+                    <div class="story__summary">Mô tả bài viết</div>
+                    <div class="story__extend">
+                        <span><i class="fal fa-clock text-success"></i> January 12th, 2011</span>
+                    </div>
+                </div>
+            </article>
+            <article class="story story--is-checkable">
+                <figure class="story__thumb"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></figure>
+                <div class="story__header">
+                    <h3 class="story__title">Tiêu đề bài viết</h3>
+                    <div class="story__summary">Mô tả bài viết</div>
+                    <div class="story__extend">
+                        <span><i class="fal fa-clock text-success"></i> January 12th, 2011</span>
+                    </div>
+                </div>
+            </article>
+            <article class="story story--is-checkable">
+                <figure class="story__thumb"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></figure>
+                <div class="story__header">
+                    <h3 class="story__title">Tiêu đề bài viết</h3>
+                    <div class="story__summary">Mô tả bài viết</div>
+                    <div class="story__extend">
+                        <span><i class="fal fa-clock text-success"></i> January 12th, 2011</span>
+                    </div>
+                </div>
+            </article>
+            <article class="story  story--is-checkable is-checked">
+                <figure class="story__thumb"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></figure>
+                <div class="story__header">
+                    <h3 class="story__title">Tiêu đề bài viết</h3>
+                    <div class="story__summary">Mô tả bài viết</div>
+                    <div class="story__extend">
+                        <span><i class="fal fa-clock text-success"></i> January 12th, 2011</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
     <div id="site-mask"></div>
     <footer class="site-footer" id="site-footer"></footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -659,6 +729,10 @@
     var dialogProgress = new HDialog("progressUpload", "Đang tải lên... ");
     $("#btnInsert").click(function() {
         dialogProgress.Show();
+    });
+    var dialogRelated = new HDialog("selectRelatedModal", "Chọn tin liên quan ");
+    $("#selectRelated").click(function() {
+        dialogRelated.Show();
     });
     </script>
 </body>

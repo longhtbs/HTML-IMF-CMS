@@ -85,8 +85,8 @@
                 margin-left: 0.25rem;
                 padding: 0.125rem 0.5rem;
                 cursor: pointer;
-                    background-color: #f9f9f9;
-                
+                background-color: #fafafa;
+
                 &:hover {
                     background-color: #f0f0f0;
                 }
@@ -94,7 +94,8 @@
 
             .dropdown-item {
                 font-size: 0.875rem;
-                .fal{
+
+                .fal {
                     font-size: 1rem;
                 }
             }
@@ -124,6 +125,42 @@
                 float: right;
                 text-align: right;
                 width: 64px;
+            }
+        }
+    }
+
+    &--is-checkable {
+        position: relative;
+        padding: 4px;
+        border: 1px dashed transparent;
+        cursor: pointer;
+
+        &::before {
+            display: none;
+            font-family: "Font Awesome 5 Pro";
+            content: '';
+            color: $blue;
+            overflow: hidden;
+            text-align: center;
+            position: absolute;
+            top: 8px;
+            right: 8px;font-size: 1.25rem;
+        }
+
+        &:hover {
+            border-color: $primary;
+        }
+
+        .story__thumb {
+            float: left;
+            margin-right: 0.5rem;
+            margin-bottom: 0;
+            max-width: 64px;
+        }
+
+        &.is-checked {
+            &::before {
+                display: block;
             }
         }
     }

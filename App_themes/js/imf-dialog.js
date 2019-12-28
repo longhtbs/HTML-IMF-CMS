@@ -5,7 +5,7 @@ class HDialog {
 
     /** Hàm khởi tạo đối tượng dialog
      * @function
-    * @name HDialog
+     * @name HDialog
      * @param {any} ContentID
      * @param {any} Tiêu đề của dialog
      * @param {Danh sách các nút được close, ví dụ: #abc,.example} ButtonsClose
@@ -42,7 +42,7 @@ class HDialog {
     }
     /**Phương thức hiển thị dialog
      * @function
-    * @name Show
+     * @name Show
      */
     Show() {
         currentDialogZIndex += 1;
@@ -53,12 +53,13 @@ class HDialog {
         var left = 0;
         var top = 0;
         if (this.LeftPosition > 0 && this.TopPosition > 0) {
-            left = this.LeftPosition; top = this.TopPosition;
+            left = this.LeftPosition;
+            top = this.TopPosition;
         } else if (this.WidthContainer > 0 && this.HeightContainer > 0) {
             left = (this.WidthContainer - $(modal).width()) / 2;
             top = (this.HeightContainer - $(modal).height()) / 2;
         } else {
-            left = (($(window).width() - $(modal).width()-20) / 2)-10;
+            left = (($(window).width() - $(modal).width() - 20) / 2) - 10;
             top = ($(window).height() - $(modal).height()) / 2;
             if (top < 70) top = 70;
         }
@@ -81,7 +82,7 @@ class HDialog {
         //});
 
         ///sự kiện khi người dùng click vào nút close
-        $(".modal span.close").on('click', function () {
+        $(".modal span.close").on('click', function() {
             $(this).parent().find(".group-input label").css("opacity", 0);
             $(this).parent().parent().css({ "visibility": "hidden", 'display': 'none' });
         });
@@ -90,7 +91,7 @@ class HDialog {
         if (this.ButtonsClose !== undefined && this.ButtonsClose !== '') {
             var arrayClose = this.ButtonsClose.split(',');
             for (var i = 0; i < arrayClose.length; i++) {
-                $(arrayClose[i]).on('click', function () {
+                $(arrayClose[i]).on('click', function() {
                     $(modal).find(".group-input label").css("opacity", 0);
                     $(modal).parent().css({ "visibility": "hidden", 'display': 'none' });
                 });
@@ -99,7 +100,7 @@ class HDialog {
     }
     /**Phương thức đóng đối tượng dialog
      *@function
-    *@name Close
+     *@name Close
      */
     Close() {
         var modal = document.getElementById(this.ContentID);
@@ -110,8 +111,8 @@ class HDialog {
     }
 }
 
-jQuery.fn.outerHTML = function (s) {
-    return s
-        ? this.before(s).remove()
-        : jQuery("<p>").append(this.eq(0).clone()).html();
+jQuery.fn.outerHTML = function(s) {
+    return s ?
+        this.before(s).remove() :
+        jQuery("<p>").append(this.eq(0).clone()).html();
 };
