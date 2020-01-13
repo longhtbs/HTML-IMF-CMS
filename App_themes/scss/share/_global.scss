@@ -135,3 +135,14 @@ h2.title {
         }
     }
 }
+
+.search-wrap {
+    position: relative;
+
+    .fa-search {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+    }
+}
