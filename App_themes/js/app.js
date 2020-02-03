@@ -5,6 +5,7 @@ var widthWindows = $(window).width(),
 var rtime = new Date();
 var delta = 200;
 var timeout = false;
+var leftNavPos;
 
 $(function() {
     /*check device width*/
@@ -51,7 +52,8 @@ $(function() {
         }
         //ResizeWindows();
     });
-
+    leftNavPos = $('.site-nav-wrap li.is-active').position().top;
+    $('.site-nav-wrap')[0].scrollTop += (leftNavPos - 16);
 });
 
 

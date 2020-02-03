@@ -118,6 +118,15 @@
             border-top: 1px solid #ddd;
         }
 
+        &-sm {
+            .story__thumb {
+                float: left;
+                margin-right: 0.5rem;
+                max-width: 64px;
+                margin-bottom: 0;
+            }
+        }
+
         @include respond-above(md) {
             .story__thumb {
                 float: left;
@@ -136,6 +145,16 @@
                 float: right;
                 text-align: right;
                 width: 64px;
+            }
+
+            &-sm {
+                .story__thumb {
+                    max-width: 64px;
+                }
+
+                .story__header {
+                    width: calc(100% - 72px);
+                }
             }
         }
     }
@@ -173,6 +192,37 @@
         &.is-checked {
             &::before {
                 display: block;
+            }
+        }
+    }
+
+    &--moveable {
+        border: 1px dashed transparent;
+        padding: 0.25rem;
+        position: relative;
+
+        &:hover {
+            border-color: $primary;
+            cursor: move;
+        }
+
+        .story__change {
+            background-color: #e0e0e0;
+            text-align: center;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+
+            &:hover {
+                background-color: $green;
+                color: white;
+            }
+
+            @include respond-above(md) {
+                display: none;
             }
         }
     }

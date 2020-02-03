@@ -146,3 +146,32 @@ h2.title {
         transform: translateY(-50%);
     }
 }
+
+.btn-pin {
+    position: fixed;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $blue;
+    color: white;
+    margin-top: 1rem;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.25rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+
+    @include respond-above(md) {
+        display: none;
+    }
+
+    &-desktop {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+        @include respond-above(md) {
+            display: block;
+        }
+    }
+}
