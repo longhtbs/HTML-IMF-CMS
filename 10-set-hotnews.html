@@ -120,7 +120,15 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-8 border-left">
-                            <h5><b>Danh sách tinh nổi bật</b></h5>
+                            <div class="row">
+                                <div class="col-9">
+                                    <h5><b>Danh sách tinh nổi bật</b>
+                                    </h5>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <a href="javascript:void(0)" id="aHistory"><i class="fal fa-file-alt mr-2"></i>Lịch sử thay đổi</a>
+                                </div>
+                            </div>
                             <select name="" id="sltType" class="form-control border-full">
                                 <option value="">Chuyên mục</option>
                                 <option value="Trang chủ">Trang chủ</option>
@@ -367,6 +375,27 @@
     <a href="07-editor.html" class="btn-pin" title="Tạo bài viết mới"><i class="fal fa-plus"></i></a>
     <a href="07-editor.html" class="btn-pin btn-pin-desktop" title="Tạo bài viết mới"><i class="fal fa-bolt"></i></a>
     <div id="site-mask"></div>
+    <div class="history-news-hot log-message-wrap formDetail modal-content ui-draggable ui-draggable-handle" id="history-news-hot">
+        <div id="content-his">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item pl-0">
+                    <p class="time text-muted mb-2">7/02/2020 15:26</p>
+                    <p class="mb-2"><span class="name">Administrator Set nổi bật trang chủ <br><b>Brexit trở nên tiêu cực hơn khi EU muốn thay đổi các quy tắc tài chính!</b></span></p>
+                    <p class="content-log text-primary mb-0">vị trí 3</p>
+                </li>
+                <li class="list-group-item pl-0">
+                    <p class="time text-muted mb-2">7/02/2020 15:26</p>
+                    <p class="mb-2"><span class="name">Administrator Set nổi bật trang chủ <br><b>Nhận định của Trader JPMorgan NewYork tối 5/2</b></span></p>
+                    <p class="content-log text-primary mb-0">vị trí 2</p>
+                </li>
+                <li class="list-group-item pl-0">
+                    <p class="time text-muted mb-2">7/02/2020 15:26</p>
+                    <p class="mb-2"><span class="name">Administrator Set nổi bật trang chủ <br><b>USD/JPY - Cần thêm động lực để vượt qua ngưỡng 110.</b></span></p>
+                    <p class="content-log text-primary mb-0">vị trí 1</p>
+                </li>
+            </ul>
+        </div>
+    </div>
     <footer class="site-footer" id="site-footer"></footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="App_themes/js/vendor/jquery.min.js"></script>
@@ -378,6 +407,10 @@
     var dialogSelectHotNews = new HDialog("selectHotNews", "Demo");
     $(".story__change").click(function() {
         dialogSelectHotNews.Show();
+    });
+    var dialogHistoryNewsHot = new HDialog("history-news-hot", "Lịch sử set nổi bật");
+    $("#aHistory").click(function() {
+        dialogHistoryNewsHot.Show();
     });
     </script>
 </body>

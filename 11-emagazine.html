@@ -15,10 +15,10 @@
     <link href="App_themes/css/jquery-ui.css" rel="stylesheet" />
     <link href="App_themes/css/imf-dialog.css" rel="stylesheet" />
     <link href="App_themes/css/custom.css" rel="stylesheet" />
-    <title>IMF CMS - Editor</title>
+    <title>IMF CMS - Editor Magazine</title>
 </head>
 
-<body class="page-full page-editor">
+<body class="page-full page-editor page-magazine">
     <header class="site-header" id="site-header">
         <h1 class="logo"><a href="#"><img src="App_themes/images/logo.png" alt="" class="img-fluid"></a></h1>
         <div class="content">
@@ -65,11 +65,11 @@
             </div>
         </div>
     </header>
-    <main class="site-content is-expand">
+    <main class="site-content">
         <div class="container">
             <section class="box mt-3" id="base">
                 <div class="box__header">
-                    <h5 class="box__title">Tạo bài viết mới</h5>
+                    <h5 class="box__title">Tạo bài Magazine</h5>
                 </div>
                 <div class="box__content">
                     <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
@@ -93,6 +93,9 @@
                     <ul class="children">
                         <li class="is-active">
                             <a href="/?cat=news-edit" title="Viết bài mới"><i class="fal fa-edit"></i> Viết bài mới</a>
+                        </li>
+                        <li class="">
+                            <a href="/magazine.aspx" title="Viết Magazine"><i class="fal fa-file-image"></i> Viết Magazine</a>
                         </li>
                         <li>
                             <a href="/?cat=news-mylist" title="Bài của tôi"><i class="fal fa-book"></i> Bài của tôi (2)</a>
@@ -202,13 +205,13 @@
     <!-- right navbar -->
     <div class="site-aside">
         <div class="column-nav">
-            <a class="nav-item is-active" href="#detailBasic" title="Demo 1" data-target="detailBasic"><i class="fal fa-info"></i></a>
+            <a class="nav-item" href="#detailBasic" title="Demo 1" data-target="detailBasic"><i class="fal fa-info"></i></a>
             <a class="nav-item" href="#" title="Demo 2" data-target="navSeo"><i class="fal fa-file-search"></i></a>
             <a class="nav-item" href="#" title="Demo 2" data-target="navAdvance"><i class="fal fa-cog"></i></a>
             <a class="nav-item" href="#" title="Demo 2" data-target="navRoyalty"><i class="fal fa-usd-circle"></i></a>
         </div>
         <div class="column-content">
-            <div class="nav-content is-active" id="detailBasic">
+            <div class="nav-content" id="detailBasic">
                 <h5 class="p-3 mb-0 bg-primary text-white">Thông tin cơ bản</h5>
                 <div class="p-3">
                     <div class="form-group form-inline">

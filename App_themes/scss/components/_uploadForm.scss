@@ -170,4 +170,38 @@
             }
         }
     }
+
+    // crop style
+    .crop-zone {
+        .crop-wrap {
+            padding: 16px;
+            border: 2px dashed #aaa;
+        }
+
+        @include respond-above(md) {
+            display: flex;
+            flex-wrap: wrap;
+
+            .crop-wrap {
+                flex-basis: 60%;
+            }
+
+            .crop-info {
+                flex-basis: 40%;
+                padding-left: 1rem;
+
+                .row {}
+            }
+        }
+
+        @include respond-above(lg) {
+            .crop-wrap {
+                flex-basis: 75%;
+            }
+
+            .crop-info {
+                flex-basis: 25%;
+            }
+        }
+    }
 }

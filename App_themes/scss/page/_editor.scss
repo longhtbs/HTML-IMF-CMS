@@ -51,3 +51,28 @@
     margin-right: auto;
     border: 1px solid #ddd;
 }
+
+.page-magazine {
+    .container {
+        @include respond-above(lg) {
+            width: calc(100% );
+            max-width: calc(100% );
+
+            .editor {
+                max-width: 100%;
+            }
+        }
+    }
+
+    // .site-content {
+    //     @media screen and (min-width: 768px) and (max-width: 1600px) {
+    //         margin-left: 50px;
+    //     }
+
+    //     &.is-expand {
+    //         @media screen and (min-width: 1024px) {
+    //             margin-right: 650px;
+    //         }
+    //     }
+    // }
+}

@@ -147,6 +147,13 @@
                 }
             }
         }
+
+        .page-magazine & {
+            @media screen and(min-width: 1600px) {
+                right: 100%;
+                left: auto;
+            }
+        }
     }
 }
 

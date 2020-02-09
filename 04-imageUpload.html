@@ -74,10 +74,11 @@
                 <div class="upload upload-wrap">
                     <div class="upload-nav">
                         <a class="nav-item" href="#" data-target="tabSearch"><i class="fal fa-search"></i></a>
-                        <a class="nav-item is-active" href="#" data-target="tabUpload">Tải lên</a>
+                        <a class="nav-item " href="#" data-target="tabUpload">Tải lên</a>
                         <a class="nav-item" href="#" data-target="tabImage">Ảnh</a>
                         <a class="nav-item" href="#" data-target="tabAlbum">Album</a>
                         <a class="nav-item" href="#" data-target="tabUrl">Địa chỉ web (URL)</a>
+                        <a class="nav-item is-active" href="#" data-target="tabCrop">Crop ảnh</a>
                     </div>
                     <div class="upload-content">
                         <!-- tab upload -->
@@ -99,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content is-active" id="tabUpload">
+                        <div class="tab-content " id="tabUpload">
                             <div class="browseImg">Kéo ảnh vào đây</div>
                             <div class="tab-footer">
                                 <div class="row">
@@ -326,6 +327,66 @@
                                 <div class="text-right">
                                     <a class="btn btn-dark btn-sm mr-2" id="btnCancel4">Hủy</a>
                                     <a class="btn btn-primary btn-sm" id="btnInsert4">Chèn</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Crop tab -->
+                        <div class="tab-content is-active" id="tabCrop">
+                            <div class="crop-zone">
+                                <div class="crop-wrap">
+                                    Drag & Crop
+                                </div>
+                                <div class="crop-info p-3 bg-light">
+                                    <h4 class=" mb-3">Thông tin Crop ảnh</h4>
+                                    <div class="docs-data mb-3 row no-gutters">
+                                        <div class="col-3">
+                                            <div class="group-input bg-light p-2 border border-primary">
+                                                <label class="font-weight-bold text-primary">X (px)</label>
+                                                <input type="text" class="form-control show" id="dataX" placeholder="x" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="group-input bg-light p-2 ml-2 border border-primary">
+                                                <label class="font-weight-bold text-primary">Y (px)</label>
+                                                <input type="text" class="form-control show" id="dataY" placeholder="Y" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="group-input bg-light p-2 ml-2 border border-primary">
+                                                <label class="font-weight-bold text-primary">Width</label>
+                                                <input type="text" class="form-control show" id="dataWidth" placeholder="width" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="group-input bg-light p-2 ml-2 border border-primary">
+                                                <label class="font-weight-bold text-primary">height</label>
+                                                <input type="text" class="form-control show" id="dataHeight" placeholder="height" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <p><b>Tỷ lệ</b></p>
+                                    <div class="ratios mb-2 clearfix">
+                                        <span class="btn btn-outline-dark btn-sm mb-2 active" data-value="1.7777777777777777">16:9</span>
+                                        <span class="btn btn-outline-dark btn-sm mb-2" data-value="1.3333333333333333">4:3</span>
+                                        <span class="btn btn-outline-dark btn-sm mb-2" data-value="1">1:1</span>
+                                        <span class="btn btn-outline-dark btn-sm mb-2" data-value="0.6666666666666666">2:3</span>
+                                        <span class="btn btn-outline-dark btn-sm mb-2" data-value="NaN">Tự do</span>
+                                    </div>
+                                    <div class="text-right clearfix">
+                                        <span class="btn btn-success set-data ml-auto" id="setData">Set </span>
+                                    </div>
+                                    <hr>
+                                    <p><b>Xoay ảnh</b></p>
+                                    <div class="rotates clearfix">
+                                        <span data-value="-45" class="btn btn-outline-dark btn-sm mb-2 icon-degrees-45"><i class="fal fa-undo fa-rotate-90 mr-2"></i>Xoay -45 độ</span>
+                                        <span data-value="45" class="btn btn-outline-dark btn-sm mb-2 icon-degrees45"><i class="fal fa-undo fa-flip-horizontal mr-2"></i>Xoay 45 độ</span>
+                                        <span data-value="-90" class="btn btn-outline-dark btn-sm mb-2 icon-degrees-90"><i class="fal fa-undo fa-rotate-180 mr-2"></i>Xoay -90 độ</span>
+                                        <span data-value="90" class="btn btn-outline-dark btn-sm mb-2 icon-degrees90"><i class="fal fa-undo fa-flip-vertical mr-2"></i>Xoay 90 độ</span>
+                                    </div>
+                                    <div class="text-right clearfix">
+                                        <span class="btn btn-primary" id="btnCrop">Lưu ảnh</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
