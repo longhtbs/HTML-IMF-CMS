@@ -60,7 +60,6 @@
 
     .story__author,
     .story__approver {
-        flex-basis: 100%;
         margin-bottom: 0.25rem;
     }
 
@@ -87,9 +86,6 @@
 
         .story__extend {
             margin-top: 0.5rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
 
             .btn-dropdown {
                 font-size: 2em;
@@ -106,6 +102,12 @@
             .dropdown-item {
                 font-size: 0.875rem;
 
+                .fal {
+                    font-size: 1rem;
+                }
+            }
+
+            .button-wrap {
                 .fal {
                     font-size: 1rem;
                 }

@@ -55,8 +55,8 @@
 .page-magazine {
     .container {
         @include respond-above(lg) {
-            width: calc(100% );
-            max-width: calc(100% );
+            width: calc(100%);
+            max-width: calc(100%);
 
             .editor {
                 max-width: 100%;
@@ -64,15 +64,29 @@
         }
     }
 
-    // .site-content {
-    //     @media screen and (min-width: 768px) and (max-width: 1600px) {
-    //         margin-left: 50px;
-    //     }
+    .site-content {
+        @media screen and (min-width: 1601px) {
+            margin-left: 50px;
+        }
 
-    //     &.is-expand {
-    //         @media screen and (min-width: 1024px) {
-    //             margin-right: 650px;
-    //         }
-    //     }
-    // }
+        &.is-expand {
+            @media screen and (min-width: 1024px) {
+                margin-right: 650px;
+            }
+        }
+    }
+
+    .site-nav {
+        @media screen and (min-width: 1601px) {
+            &.triggerable {
+                .site-nav__trigger {
+                    display: block;
+                }
+            }
+
+            &.is-active {
+                left: 0;
+            }
+        }
+    }
 }
