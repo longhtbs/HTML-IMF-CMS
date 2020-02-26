@@ -27,3 +27,15 @@
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
 }
+
+.row-cols-xxl {
+    &-4 {
+        @include respond-above(xxl) {
+
+            &>* {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    }
+}
