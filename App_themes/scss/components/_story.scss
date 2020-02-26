@@ -228,4 +228,26 @@
             }
         }
     }
+
+    &.card {
+        .card-img-top {
+            position: relative;
+        }
+
+        .card-img-overlay {
+            align-items: flex-end;
+            display: flex;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+
+            .story__title {
+                a {
+                    color: white;
+
+                    &:hover {
+                        color: $gray-300;
+                    }
+                }
+            }
+        }
+    }
 }
