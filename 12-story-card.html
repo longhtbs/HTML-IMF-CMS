@@ -66,30 +66,82 @@
         </div>
     </header>
     <main class="site-content">
-        <div class="container">
-            <section class="box mt-5">
+        <div class="container-fluid">
+            <section class="box box--transparent mt-5">
                 <div class="box__header">
                     <h2 class="box__title text-uppercase">
                         <i class="fal fa-warehouse mr-2"></i>DS Bài viết
                         <a href="07-editor.html" class="btn btn-sm btn-light float-right" id="aAdd"><i class="fal fa-plus mr-1"></i>Viết bài mới</a></h2>
                 </div>
                 <div class="box__content">
-                    <div class="row row-cols-1 row-cols-md-3">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
                         <div class="col mb-4">
-                            <div class="card h-100">
+                            <div class="card story h-100">
                                 <img src="https://source.unsplash.com/random/320x320" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class=" card-body p-2">
+                                    <h5 class="card-title story__title"><a href="#">Card title</a></h5>
+                                    <p class="card-text mb-2 story__summary"><span>Tin tức</span> | <span>Tin trong nước</span></p>
+                                    <div class="story__extend">
+                                        <div class="story__author text-primary">
+                                            <span class="mr-2"><i class="fal fa-edit mr-1"></i>Administrator</span>
+                                            <span><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
+                                        </div>
+                                        <div class="story__approver text-success">
+                                            <span class="mr-2"><i class="fal fa-globe mr-1"></i>Administrator</span>
+                                            <span class=""><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer p-2">
+                                    <div class="d-flex mt-1">
+                                        <div class="button-wrap w-30 d-flex">
+                                            <span class="mr-3">
+                                                <i class="fal fa-eye mr-1"></i><span style="color:#333">2</span> | <span style="color:#333">0</span>
+                                            </span>
+                                        </div>
+                                        <div class="button-wrap w-70 justify-content-end d-flex">
+                                            <a class="align-self-end mr-1" href="javascript:void(0);" title="Lịch sử bài viết" data-id="history"><i class="mr-2 fal fa-history"></i></a>
+                                            <a class="align-self-end mr-1" href="javascript:void(0);" title="Log bài viết"><i class="mr-2 fal fa-file-alt"></i></a>
+                                            <a class="align-self-end mr-1" href="javascript:void(0);" title="Xem trước"><i class="mr-2 fal fa-eye"></i></a>
+                                            <a class="align-self-end mr-1 text-warning" href="javascript:void(0);" title="Book mark"><i class="mr-2 fal fa-star"></i></a>
+                                            <a class="align-self-end mr-1 text-danger" href="javascript:void(0);" title="Xóa"><i class="mr-2 fal fa-trash-alt"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col mb-4">
-                            <div class="card h-100">
-                                <img src="https://source.unsplash.com/random/320x320" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a short card.</p>
+                            <div class="card story h-100">
+                                <img src="https://source.unsplash.com/random/640x360" class="card-img-top" alt="...">
+                                <div class=" card-body p-2">
+                                    <h5 class="card-title story__title"><a href="#">Card title</a></h5>
+                                    <p class="card-text mb-2 story__summary"><span>Tin tức</span> | <span>Tin trong nước</span></p>
+                                    <div class="story__extend">
+                                        <div class="story__author text-primary">
+                                            <span class="mr-2"><i class="fal fa-edit mr-1"></i>Administrator</span>
+                                            <span><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
+                                        </div>
+                                        <div class="story__approver text-success">
+                                            <span class="mr-2"><i class="fal fa-globe mr-1"></i>Administrator</span>
+                                            <span class=""><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer p-2">
+                                    <div class="d-flex mt-1">
+                                        <div class="button-wrap w-30 d-flex">
+                                            <span class="mr-3">
+                                                <i class="fal fa-eye mr-1"></i><span style="color:#333">2</span> | <span style="color:#333">0</span>
+                                            </span>
+                                        </div>
+                                        <div class="button-wrap w-70 d-flex">
+                                            <a class="mr-1" href="javascript:void(0);" title="Lịch sử bài viết" data-id="history"><i class="mr-2 fal fa-history"></i></a>
+                                            <a class="mr-1" href="javascript:void(0);" title="Log bài viết"><i class="mr-2 fal fa-file-alt"></i></a>
+                                            <a class="mr-1" href="javascript:void(0);" title="Xem trước"><i class="mr-2 fal fa-eye"></i></a>
+                                            <a class="mr-1 text-warning" href="javascript:void(0);" title="Book mark"><i class="mr-2 fal fa-star"></i></a>
+                                            <a class="mr-1 text-danger" href="javascript:void(0);" title="Xóa"><i class="mr-2 fal fa-trash-alt"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -112,107 +164,6 @@
                             </div>
                         </div>
                     </div>
-                    <article class="story story--left">
-                        <figure class="story__thumb"><a href="#"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></a></figure>
-                        <div class="story__header">
-                            <h3 class="story__title"><a href="#">Tên CĐT</a><span class="text-muted font-weight-normal"></h3>
-                            <div class="story__summary"><span>Tin tức</span> | <span>Tin trong nước</span></div>
-                            <div class="story__extend">
-                                <div class="d-flex">
-                                    <div class="story__author w-50">
-                                        <span class="mr-2"><i class="fal fa-edit mr-1"></i>Administrator</span>
-                                        <span><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
-                                    </div>
-                                    <div class="story__approver w-50">
-                                        <span class="mr-2"><i class="fal fa-globe mr-1"></i>Administrator</span>
-                                        <span class=""><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex mt-1">
-                                    <div class="button-wrap w-50 d-flex">
-                                        <span class="mr-3">
-                                            <i class="fal fa-eye mr-1"></i><span style="color:#333">2</span> | <span style="color:#333">0</span>
-                                        </span>
-                                    </div>
-                                    <div class="button-wrap w-50 d-flex">
-                                        <a class="mr-1" href="javascript:void(0);" title="Lịch sử bài viết" data-id="history"><i class="mr-2 fal fa-history"></i></a>
-                                        <a class="mr-1" href="javascript:void(0);" title="Log bài viết"><i class="mr-2 fal fa-file-alt"></i></a>
-                                        <a class="mr-1" href="javascript:void(0);" title="Xem trước"><i class="mr-2 fal fa-eye"></i></a>
-                                        <a class="mr-1 text-warning" href="javascript:void(0);" title="Book mark"><i class="mr-2 fal fa-star"></i></a>
-                                        <a class="mr-1 text-danger" href="javascript:void(0);" title="Xóa"><i class="mr-2 fal fa-trash-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="story story--left">
-                        <figure class="story__thumb"><a href="#"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></a></figure>
-                        <div class="story__header">
-                            <h3 class="story__title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores in, excepturi nihil praesentium amet a repellat ad nobis saepe molestiae quam, minus, sunt maiores, fugit. Animi adipisci non unde rem.</a><span class="text-muted font-weight-normal"></h3>
-                            <div class="story__summary"><span>Tin tức</span> | <span>Tin trong nước</span></div>
-                            <div class="story__extend">
-                                <div class="story__author">
-                                    <span class="mr-2"><i class="fal fa-edit mr-1"></i>SonDT</span>
-                                    <span><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
-                                </div>
-                                <div class="story__approver">
-                                    <span class="mr-2"><i class="fal fa-globe mr-1"></i>Administrator</span>
-                                    <span class=""><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
-                                </div>
-                                <div class="dropdown d-inline-block">
-                                    <i class="fal fa-ellipsis-h btn-dropdown" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Viết bài mới"><i class="mr-2 fal fa-history"></i> Lịch sử viết bài</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài của tôi"><i class="mr-2 fal fa-file-alt"></i> Log bài viết</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài của tôi"><i class="mr-2 fal fa-eye"></i> Xem trước</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài chờ biên tập"><i class="mr-2 fal fa-clock"></i> Gửi lên chờ biên tập</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài nhận biên tập"><i class="mr-2 fal fa-arrow-to-bottom"></i> Nhận biên tập</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài chờ xuất bản"><i class="mr-2 fal fa-hourglass-start"></i> Gửi lên chờ</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài nhận xuất bản"><i class="mr-2 fal fa-download"></i> Nhận xuất bản</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài đã xuất bản"><i class="mr-2 fal fa-undo"></i> Trả bài viết</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài trả lại"><i class="mr-2 fal fa-sign-out"></i> Nhận bài trả lại</a>
-                                        <hr>
-                                        <a class="dropdown-item text-danger" href="javascript:void(0);" class="text-danger" title="Bài gỡ xuống"><i class="mr-2 fal fa-cloud-download"></i>Gỡ xuống</a>
-                                        <a class="dropdown-item text-danger" href="javascript:void(0);" class="text-danger" title="Bài đã xóa"><i class="mr-2 fal fa-trash-alt"></i> Xóa</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="story story--left">
-                        <figure class="story__thumb"><a href="#"><img src="https://source.unsplash.com/random/320x320" alt="" class="img-fluid"></a></figure>
-                        <div class="story__header">
-                            <h3 class="story__title"><a href="#">Hà Nội: Sương mù bao phủ dày đặc, các tòa nhà cao tầng bất ngờ "biến mất"</a><span class="text-muted font-weight-normal"></h3>
-                            <div class="story__summary"><span>Tin tức</span> | <span>Tin trong nước</span></div>
-                            <div class="story__extend">
-                                <div class="story__author">
-                                    <span class="mr-2"><i class="fal fa-edit mr-1"></i>Long</span>
-                                    <span><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
-                                </div>
-                                <div class="story__approver">
-                                    <span class="mr-2"><i class="fal fa-globe mr-1"></i>Administrator</span>
-                                    <span class=""><i class="fal fa-clock mr-1"></i>09:02 09/01/2020</span>
-                                </div>
-                                <div class="dropdown d-inline-block">
-                                    <i class="fal fa-ellipsis-h btn-dropdown" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Viết bài mới"><i class="mr-2 fal fa-history"></i> Lịch sử viết bài</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài của tôi"><i class="mr-2 fal fa-file-alt"></i> Log bài viết</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài của tôi"><i class="mr-2 fal fa-eye"></i> Xem trước</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài chờ biên tập"><i class="mr-2 fal fa-clock"></i> Gửi lên chờ biên tập</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài nhận biên tập"><i class="mr-2 fal fa-arrow-to-bottom"></i> Nhận biên tập</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài chờ xuất bản"><i class="mr-2 fal fa-hourglass-start"></i> Gửi lên chờ</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài nhận xuất bản"><i class="mr-2 fal fa-download"></i> Nhận xuất bản</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài đã xuất bản"><i class="mr-2 fal fa-undo"></i> Trả bài viết</a>
-                                        <a class="dropdown-item" href="javascript:void(0);" title="Bài trả lại"><i class="mr-2 fal fa-sign-out"></i> Nhận bài trả lại</a>
-                                        <hr>
-                                        <a class="dropdown-item text-danger" href="javascript:void(0);" title="Bài gỡ xuống"><i class="mr-2 fal fa-cloud-download"></i> Gỡ xuống</a>
-                                        <a class="dropdown-item text-danger" href="javascript:void(0);" title="Bài đã xóa"><i class="mr-2 fal fa-trash-alt"></i> Xóa bài</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
                 </div>
                 <div class="box__footer">
                     <nav aria-label="Page navigation example">

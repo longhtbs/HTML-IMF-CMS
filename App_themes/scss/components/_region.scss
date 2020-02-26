@@ -47,4 +47,13 @@
             font-size: 1.125rem;
         }
     }
+
+    &--transparent {
+        .box {
+            &__content {
+                padding: 1rem 0 0;
+                background-color: transparent;
+            }
+        }
+    }
 }
