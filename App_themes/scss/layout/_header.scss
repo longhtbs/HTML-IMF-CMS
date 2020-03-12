@@ -27,6 +27,7 @@
 
     #btn-search,
     #btn-rightNav,
+    #btn-noti,
     #btn-expand {
         padding: 0 0.5rem;
         font-size: 1.5rem;
@@ -149,14 +150,70 @@
         }
     }
 
-    .user-wrap {
-        margin-left: auto;
-        cursor: pointer;
+    #btn-noti {
+        margin-right: 0.5rem;
+        position: relative;
+
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.625rem;
+            transform: translate(25%, -50%);
+        }
+
+        @include respond-above(md) {
+            margin-right: 1rem;
+
+        }
+    }
+
+    .noti-wrap {
+        .list-group {
+            width: 300px;
+            max-height: 450px;
+            overflow: auto;
+
+            &-item {
+                border: none;
+                border-bottom: 1px solid $gray-200;
+            }
+        }
+
+        @include respond-above(md) {
+
+            .list-group {
+                width: 400px;
+            }
+        }
+    }
+
+    .user {
+        &-wrap {
+            display: flex;
+            margin-left: auto;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        &__name {
+            display: none;
+
+            @include respond-above(md) {
+                display: inline;
+            }
+        }
     }
 
     @include respond-above(sm) {}
 
     @include respond-above(md) {
+        #btn-rightNav {
+            display: none;
+        }
+    }
+
+    @include respond-above(lg) {
         max-height: 3.5rem;
 
         .logo {
@@ -216,6 +273,4 @@
             }
         }
     }
-
-    @include respond-above(lg) {}
 }
