@@ -252,5 +252,27 @@
                 }
             }
         }
+
+        .card-footer {
+
+            .button-wrap {
+                align-items: center;
+
+                &.w-70 {
+                    .fal {
+                        font-size: 1rem;
+                        padding: 0.5rem 0.75rem;
+
+                        @include respond-above(md) {
+                            padding: 0.25rem;
+                        }
+
+                        @include respond-above(xl) {
+                            padding: 0.25rem 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

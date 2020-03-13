@@ -174,9 +174,66 @@
             max-height: 450px;
             overflow: auto;
 
+            &-title {
+                padding: 0 1rem 0.5rem;
+                border-bottom: 1px solid $gray-200;
+                font-size: 0.75rem;
+            }
+
             &-item {
                 border: none;
                 border-bottom: 1px solid $gray-200;
+                position: relative;
+                padding-right: 1.75rem;
+                font-size: 0.75rem;
+
+                &.is-read {
+                    .fa-circle {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        .item {
+            &__thumb {
+                width: 48px;
+                margin-right: 0.5rem;
+                float: left;
+            }
+
+            &__title,
+            &__summary,
+            &__meta {
+                width: calc(100% - 56px);
+                margin-left: 56px;
+                margin-bottom: 0.25rem;
+            }
+
+            &__title {
+                font-size: 0.75rem;
+                font-weight: bold;
+
+            }
+
+            &__summary {
+                opacity: 0.8;
+            }
+
+            &__meta {
+                opacity: 0.5;
+            }
+
+            &__action {
+                position: absolute;
+                right: 0.5rem;
+                top: 0.75rem;
+                font-size: 0.5rem;
+                padding: 0.5rem;
+
+                &:hover {
+                    color: $yellow;
+                }
             }
         }
 
