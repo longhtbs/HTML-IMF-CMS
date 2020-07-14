@@ -315,6 +315,11 @@
                 right: 10px;
                 top: 50%;
                 transform: translateY(-50%);
+
+                &.is-active {
+                    font-weight: bold;
+                    color: $primary;
+                }
             }
 
             .input-wrap {

@@ -142,8 +142,10 @@ function siteMaskClick(e) {
 function dropClick(e) {
     e.preventDefault();
     e.stopPropagation();
+    $(this).toggleClass('is-active');
     t = $(this).data('target');
-    expandDropdown(t);
+    toggleDropdownSearchExpand(t);
+    // expandDropdown(t);
 }
 
 function expandDropdown(targetDropdown) {
@@ -161,6 +163,10 @@ function expandDropdown(targetDropdown) {
             $('#' + targetDropdown).removeClass('is-active');
         })
     }
+}
+
+function toggleDropdownSearchExpand(targetDropdown) {
+    $('#' + targetDropdown).toggleClass('is-active');
 }
 
 // toggle right nav bar
