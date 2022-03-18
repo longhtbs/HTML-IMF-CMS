@@ -1,0 +1,113 @@
+.page-meeting {
+    .site-aside {
+        @include respond-below(md) {
+            display: block;
+            position: static;
+
+            .column-nav {
+                width: initial;
+                position: static;
+                display: flex;
+                border-bottom: 1px solid $gray-400;
+            }
+
+            .column-content {
+                max-width: initial;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.stream {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $gray-400;
+        }
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-sm {
+        font-size: 0.75rem;
+    }
+
+    .question {
+        .meta {
+            margin-bottom: 0.5rem;
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+
+        .author {
+            margin-bottom: 1rem;
+
+            @include respond-above(md) {
+                display: flex;
+                align-items: center;
+            }
+
+            .name,
+            a:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+
+            time {
+                margin-left: auto;
+                font-size: 0.9em;
+                opacity: 0.7;
+            }
+        }
+
+        .content {
+            background: $gray-200;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 100%;
+                left: 0.5rem;
+                width: 10px;
+                height: 10px;
+                border-top: 8px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 8px solid $gray-200;
+                border-left: 10px solid transparent;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .guest {
+            text-align: right;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .answer {
+        display: none;
+        padding: 1rem 1rem 0rem 1.5rem;
+        background: $gray-100;
+
+        .editor {
+            max-width: 100%;
+        }
+
+        .action {
+            margin-top: 0.5rem;
+        }
+    }
+}

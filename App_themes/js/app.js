@@ -54,6 +54,22 @@ $(function() {
     });
     leftNavPos = $('.site-nav-wrap li.is-active').position().top;
     $('.site-nav-wrap')[0].scrollTop += (leftNavPos - 16);
+
+    /*stream page*/
+    // click to toggle editor for answer
+    if ($('.page-meeting').length > 0) {
+        $('.question .btn-answer').on('click', function() {
+            $(this).parents('li').find('.answer').show();
+        });
+        $('.answer .btn-close').on('click', function() {
+            $(this).parents('.answer').hide();
+        });
+
+        if (isMobile == true) {
+            $('.site-aside .nav-item').first().addClass('is-active');
+            $('.site-aside .nav-content').first().addClass('is-active');
+        }
+    }
 });
 
 
