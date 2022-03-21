@@ -68,254 +68,266 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8 mx-auto" id="mainColumn">
-                    <ul class="nav bg-white cyan" id="mainNav">
-                        <li class="nav-item" data-id="waiting">
-                            <a href="#waiting" class="nav-link">Chờ biên tập <span>(6)</span></a>
+                    <ul class="nav nav-pills" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="waiting-tab" data-toggle="tab" href="#waiting" role="tab" aria-controls="waiting" aria-selected="true">Chờ biên tập <span>(6)</span></a>
                         </li>
-                        <li class="nav-item" data-id="editing">
-                            <a href="#editing" class="nav-link">Đang biên tập <span>(4)</span></a>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="editing-tab" data-toggle="tab" href="#editing" role="tab" aria-controls="editing" aria-selected="false">Đang biên tập <span>(4)</span></a>
                         </li>
-                        <li class="nav-item" data-id="publishing">
-                            <a href="#publishing" class="nav-link">Chờ xuất bản <span>(3)</span></a>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="publishing-tab" data-toggle="tab" href="#publishing" role="tab" aria-controls="publishing" aria-selected="false">Chờ xuất bản <span>(3)</span></a>
                         </li>
-                        <li class="nav-item" data-id="replied">
-                            <a href="#replied" class="nav-link">Đã trả lời <span>(5)</span></a>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="replied-tab" data-toggle="tab" href="#replied" role="tab" aria-controls="replied" aria-selected="false">Đã trả lời <span>(5)</span></a>
                         </li>
-                        <li class="nav-item" data-id="deleted">
-                            <a href="#deleted" class="nav-link">Đã xóa <span>(2)</span></a>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="deleted-tab" data-toggle="tab" href="#deleted" role="tab" aria-controls="deleted" aria-selected="false">Đã xóa <span>(2)</span></a>
                         </li>
                     </ul>
-                    <section class="box mt-3" id="waiting">
-                        <div class="box__header cyan">
-                            <h5 class="box__title">Câu hỏi chờ biên tập <span>(6)</span></h5>
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="waiting" role="tabpanel" aria-labelledby="waiting-tab">
+                            <section class="box" id="waiting">
+                                <div class="box__header">
+                                    <h5 class="box__title">Câu hỏi chờ biên tập <span>(6)</span></h5>
+                                </div>
+                                <div class="box__content">
+                                    <ul class="stream">
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <div class="action text-right">
+                                                    <a href="#" class="btn btn-danger btn-sm mb-2"><i class="fal fa-trash-alt"></i> Xóa</a>
+                                                    <a href="#" class="btn btn-warning btn-sm mb-2"><i class="fal fa-share"></i> Chuyển biên tập</a>
+                                                    <a href="#" class="btn btn-info btn-sm mb-2 btn-answer"><i class="fal fa-comments-alt"></i> Trả lời</a>
+                                                </div>
+                                            </div>
+                                            <div class="answer">
+                                                <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
+                                                <div class="action text-right">
+                                                    <a href="#" class="btn btn-link text-danger btn-sm ml-1 mb-2 btn-close"> Đóng</a>
+                                                    <a href="#" class="btn btn-success btn-sm ml-1 mb-2"><i class="fal fa-save"></i> Lưu</a>
+                                                    <a href="#" class="btn btn-warning btn-sm ml-1 mb-2"><i class="fal fa-clock"></i> Chờ duyệt</a>
+                                                    <a href="#" class="btn btn-info btn-sm ml-1 mb-2"><i class="fal fa-upload"></i> Xuất bản</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <div class="action text-right">
+                                                    <a href="#" class="btn btn-danger btn-sm mb-2"><i class="fal fa-trash-alt"></i> Xóa</a>
+                                                    <a href="#" class="btn btn-warning btn-sm mb-2"><i class="fal fa-share"></i> Chuyển biên tập</a>
+                                                    <a href="#" class="btn btn-info btn-sm mb-2 btn-answer"><i class="fal fa-comments-alt"></i> Trả lời</a>
+                                                </div>
+                                            </div>
+                                            <div class="answer">
+                                                <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
+                                                <div class="action text-right">
+                                                    <a href="#" class="btn btn-link text-danger btn-sm ml-1 mb-2 btn-close"> Đóng</a>
+                                                    <a href="#" class="btn btn-success btn-sm ml-1 mb-2"><i class="fal fa-save"></i> Lưu</a>
+                                                    <a href="#" class="btn btn-warning btn-sm ml-1 mb-2"><i class="fal fa-clock"></i> Chờ duyệt</a>
+                                                    <a href="#" class="btn btn-info btn-sm ml-1 mb-2"><i class="fal fa-upload"></i> Xuất bản</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
                         </div>
-                        <div class="box__content">
-                            <ul class="stream">
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <div class="action text-right">
-                                            <a href="#" class="btn btn-danger btn-sm mb-2"><i class="fal fa-trash-alt"></i> Xóa</a>
-                                            <a href="#" class="btn btn-warning btn-sm mb-2"><i class="fal fa-share"></i> Chuyển biên tập</a>
-                                            <a href="#" class="btn btn-info btn-sm mb-2 btn-answer"><i class="fal fa-comments-alt"></i> Trả lời</a>
-                                        </div>
-                                    </div>
-                                    <div class="answer">
-                                        <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
-                                        <div class="action text-right">
-                                            <a href="#" class="btn btn-link text-danger btn-sm ml-1 mb-2 btn-close"> Đóng</a>
-                                            <a href="#" class="btn btn-success btn-sm ml-1 mb-2"><i class="fal fa-save"></i> Lưu</a>
-                                            <a href="#" class="btn btn-warning btn-sm ml-1 mb-2"><i class="fal fa-clock"></i> Chờ duyệt</a>
-                                            <a href="#" class="btn btn-info btn-sm ml-1 mb-2"><i class="fal fa-upload"></i> Xuất bản</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <div class="action text-right">
-                                            <a href="#" class="btn btn-danger btn-sm mb-2"><i class="fal fa-trash-alt"></i> Xóa</a>
-                                            <a href="#" class="btn btn-warning btn-sm mb-2"><i class="fal fa-share"></i> Chuyển biên tập</a>
-                                            <a href="#" class="btn btn-info btn-sm mb-2 btn-answer"><i class="fal fa-comments-alt"></i> Trả lời</a>
-                                        </div>
-                                    </div>
-                                    <div class="answer">
-                                        <div contenteditable="true" class="editor" style="min-height:250px; width: 100%; padding:1rem">Editor</div>
-                                        <div class="action text-right">
-                                            <a href="#" class="btn btn-link text-danger btn-sm ml-1 mb-2 btn-close"> Đóng</a>
-                                            <a href="#" class="btn btn-success btn-sm ml-1 mb-2"><i class="fal fa-save"></i> Lưu</a>
-                                            <a href="#" class="btn btn-warning btn-sm ml-1 mb-2"><i class="fal fa-clock"></i> Chờ duyệt</a>
-                                            <a href="#" class="btn btn-info btn-sm ml-1 mb-2"><i class="fal fa-upload"></i> Xuất bản</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="tab-pane fade" id="editing" role="tabpanel" aria-labelledby="editing-tab">
+                            <section class="box" id="editing">
+                                <div class="box__header cyan">
+                                    <h5 class="box__title">Đang biên tập <span>(4)</span></h5>
+                                </div>
+                                <div class="box__content">
+                                    <ul class="stream">
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
                         </div>
-                    </section>
-                    <section class="box mt-5" id="editing">
-                        <div class="box__header cyan">
-                            <h5 class="box__title">Đang biên tập <span>(4)</span></h5>
+                        <div class="tab-pane fade" id="publishing" role="tabpanel" aria-labelledby="publishing-tab">
+                            <section class="box" id="publishing">
+                                <div class="box__header yellow">
+                                    <h5 class="box__title">Chờ xuất bản <span>(3)</span></h5>
+                                </div>
+                                <div class="box__content">
+                                    <ul class="stream">
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
                         </div>
-                        <div class="box__content">
-                            <ul class="stream">
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="tab-pane fade" id="replied" role="tabpanel" aria-labelledby="replied-tab">
+                            <section class="box" id="replied">
+                                <div class="box__header secondary">
+                                    <h5 class="box__title">Đã trả lời <span>(5)</span></h5>
+                                </div>
+                                <div class="box__content">
+                                    <ul class="stream">
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
                         </div>
-                    </section>
-                    <section class="box mt-5" id="publishing">
-                        <div class="box__header yellow">
-                            <h5 class="box__title">Chờ xuất bản <span>(3)</span></h5>
+                        <div class="tab-pane fade" id="deleted" role="tabpanel" aria-labelledby="deleted-tab">
+                            <section class="box" id="deleted">
+                                <div class="box__header red">
+                                    <h5 class="box__title">Đã xóa <span>(2)</span></h5>
+                                </div>
+                                <div class="box__content">
+                                    <ul class="stream">
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="question">
+                                                <div class="author">
+                                                    <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
+                                                    <strong class="name">Thùy Linh</strong>
+                                                    <a href="#">demo@gmail.com</a>
+                                                    <a href="#">098.888.8888</a>
+                                                    <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Cảm nhận của ông khi đi metro là gì?</p>
+                                                </div>
+                                                <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
+                                                <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
                         </div>
-                        <div class="box__content">
-                            <ul class="stream">
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="box mt-5" id="replied">
-                        <div class="box__header secondary">
-                            <h5 class="box__title">Đã trả lời <span>(5)</span></h5>
-                        </div>
-                        <div class="box__content">
-                            <ul class="stream">
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="box mt-5" id="deleted">
-                        <div class="box__header red">
-                            <h5 class="box__title">Đã xóa <span>(2)</span></h5>
-                        </div>
-                        <div class="box__content">
-                            <ul class="stream">
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="question">
-                                        <div class="author">
-                                            <img src="https://source.unsplash.com/random/32x32" width="32" height="32" alt="" class="img-fluid rounded-circle mr-1">
-                                            <strong class="name">Thùy Linh</strong>
-                                            <a href="#">demo@gmail.com</a>
-                                            <a href="#">098.888.8888</a>
-                                            <time datetime="2022-02-19 15:43+0700">15:43 19/02</time>
-                                        </div>
-                                        <div class="content">
-                                            <p>Cảm nhận của ông khi đi metro là gì?</p>
-                                        </div>
-                                        <div class="guest"><i class="fas fa-user-tie mr-1"></i>Đặt câu hỏi cho <strong>FRANS TIMMERMANS</strong></div>
-                                        <p class="text-muted text-right mb-0">Phóng viên 1 đang biên tập</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+                    </div>
                     <section class="mt-5" id="empty" style="height:200px; visibility: hidden;"></section>
                 </div>
             </div>
@@ -567,61 +579,6 @@
     <script src="App_themes/js/app.js"></script>
     <script src="App_themes/js/imf-dialog.js"></script>
     <script>
-    var dialogDetail = new HDialog("detail", "Demo");
-    $("#aAdd").click(function() {
-        dialogDetail.Show();
-    });
-    // scoll down & pin nav
-    var mainNavHeight = $('#mainNav').outerHeight();
-    var mainNavoffsetTop = $('#mainNav').offset().top;
-    var mainNavoffsetLeft = $('#mainNav').offset().left;
-    var bsContainer = $('#mainColumn').width();
-
-    function windowScroll() {
-        if (document.body.scrollTop > (mainNavHeight + mainNavoffsetTop) || document.documentElement.scrollTop > (mainNavHeight + mainNavoffsetTop)) {
-            $('#mainNav').addClass('is-pinned').css({ 'top': mainNavoffsetTop - 15 + 'px', 'left': mainNavoffsetLeft + 'px', 'width': bsContainer + 'px' });
-            $('#mainColumn').css('padding-top', mainNavHeight);
-        } else {
-            mainNavHeight = $('#mainNav').outerHeight();
-            mainNavoffsetTop = $('#mainNav').offset().top;
-            mainNavoffsetLeft = $('#mainNav').offset().left;
-            bsContainer = $('#mainColumn').width();
-            $('#mainColumn').removeAttr('style');
-            $("#mainNav").removeClass('is-pinned');
-        }
-    }
-
-    var sections = $('section,box'),
-        nav = $('#mainNav'),
-        nav_height = nav.outerHeight();
-
-    $(window).on('scroll', function() {
-        var cur_pos = $(this).scrollTop();
-        sections.each(function() {
-            var top = $(this).offset().top,
-                bottom = top + $(this).outerHeight();
-
-            if (cur_pos >= (top - 150) && cur_pos <= (bottom - 150)) {
-                nav.find('li').removeClass('is-active');
-                sections.removeClass('is-active');
-
-                $(this).addClass('is-active');
-                nav.find('a[href="#' + $(this).attr('id') + '"]').parent("li").addClass('is-active');
-            }
-        });
-    });
-
-    nav.find('a').on('click', function() {
-        var $el = $(this),
-            id = $el.attr('href');
-
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - 150
-        }, 'fast');
-
-        return false;
-    });
-
     var dialogAddGuest = new HDialog("AddGuest", "Tạo khách mời mới");
     $("#btnAddGuest").click(function() {
         dialogAddGuest.Show();

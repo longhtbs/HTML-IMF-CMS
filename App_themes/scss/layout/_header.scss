@@ -253,6 +253,14 @@
             align-items: center;
         }
 
+        &__avatar {
+            margin-right: 0.25rem;
+
+            @include respond-above(md) {
+                margin-right: 0;
+            }
+        }
+
         &__name {
             display: none;
 
